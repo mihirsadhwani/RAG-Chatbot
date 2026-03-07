@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--color-primary-base);
+  --color-primary-light: var(--color-primary-light-base);
+  --color-primary-dark: var(--color-primary-dark-base);
+
+  --color-sidebar: var(--color-sidebar-bg);
+  --color-sidebar-hover: var(--color-sidebar-hover-bg);
+  --color-sidebar-text: var(--color-sidebar-text-col);
+
+  --color-surface: var(--color-surface-bg);
+  --color-surface-alt: var(--color-surface-alt-bg);
+  --color-card: var(--color-card-bg);
+
+  --color-text: var(--color-text-main);
+  --color-text-secondary: var(--color-text-muted);
+  --color-border: var(--color-border-main);
+
+  --color-accent: var(--color-accent-base);
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Theme: Purple (Default) */
+    --color-primary-base: #4F46E5;
+    --color-primary-light-base: #6366F1;
+    --color-primary-dark-base: #3730A3;
+    --color-accent-base: #06B6D4;
+
+    /* Light Mode Basics */
+    --color-sidebar-bg: #1E1B4B;
+    --color-sidebar-hover-bg: #312E81;
+    --color-sidebar-text-col: #E0E7FF;
+
+    --color-surface-bg: #F8FAFC;
+    --color-surface-alt-bg: #F1F5F9;
+    --color-card-bg: #FFFFFF;
+
+    --color-text-main: #1E293B;
+    --color-text-muted: #64748B;
+    --color-border-main: #E2E8F0;
+  }
+
+  .dark {
+    --color-sidebar-bg: #09090B;
+    --color-sidebar-hover-bg: #18181B;
+    --color-sidebar-text-col: #94A3B8;
+
+    --color-surface-bg: #09090B;
+    --color-surface-alt-bg: #18181B;
+    --color-card-bg: #18181B;
+
+    --color-text-main: #F8FAFC;
+    --color-text-muted: #94A3B8;
+    --color-border-main: #27272A;
+  }
+
+  /* Theme Blue */
+  .theme-blue {
+    --color-primary-base: #2563EB;
+    --color-primary-light-base: #3B82F6;
+    --color-primary-dark-base: #1D4ED8;
+    --color-accent-base: #38BDF8;
+  }
+
+  html.theme-blue:not(.dark) {
+    --color-sidebar-bg: #1E3A8A;
+    --color-sidebar-hover-bg: #1E40AF;
+  }
+
+  /* Theme Teal */
+  .theme-teal {
+    --color-primary-base: #0D9488;
+    --color-primary-light-base: #14B8A6;
+    --color-primary-dark-base: #0F766E;
+    --color-accent-base: #34D399;
+  }
+
+  html.theme-teal:not(.dark) {
+    --color-sidebar-bg: #134E4A;
+    --color-sidebar-hover-bg: #115E59;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+}

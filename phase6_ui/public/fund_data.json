@@ -1,0 +1,3783 @@
+[
+  {
+    "fund_name": "HDFC Balanced Advantage Fund Direct Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth",
+    "fund_category": "Hybrid",
+    "fund_sub_category": "Dynamic Asset Allocation",
+    "risk_level": "Very High Risk",
+    "nav": "₹564.64",
+    "nav_date": "05 Mar '26",
+    "expense_ratio": "0.77%",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹1,06,820.61 Cr",
+    "performance_metrics": {
+      "three_year_annualised_return": "+17.7%",
+      "one_day_return": "+0.90%"
+    },
+    "historical_returns": {
+      "1_year_total_investment": "₹1,200",
+      "1_year_would_become": "₹1,201",
+      "1_year_return": "+0.08%",
+      "3_years_total_investment": "₹3,600",
+      "3_years_would_become": "₹4,664",
+      "3_years_return": "+29.56%",
+      "5_years_total_investment": "₹6,000",
+      "5_years_would_become": "₹10,139",
+      "5_years_return": "+68.98%",
+      "10_years_total_investment": "₹12,000",
+      "10_years_would_become": "₹29,118",
+      "10_years_return": "+142.65%"
+    },
+    "annualised_returns": {
+      "fund_return_3y": "+17.7%",
+      "fund_return_5y": "+17.2%",
+      "fund_return_10y": "+16.1%",
+      "fund_return_all": "+15.0%",
+      "category_avg_3y": "+11.9%",
+      "category_avg_5y": "+10.7%",
+      "category_avg_10y": "+9.6%",
+      "category_avg_all": "--",
+      "rank_3y": "1",
+      "rank_5y": "1",
+      "rank_10y": "--",
+      "rank_all": "--"
+    },
+    "holdings": [
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.48%"
+      },
+      {
+        "company_name": "ICICI Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.09%"
+      },
+      {
+        "company_name": "Reliance Industries Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.67%"
+      },
+      {
+        "company_name": "State Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.53%"
+      },
+      {
+        "company_name": "Bharti Airtel Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.80%"
+      },
+      {
+        "company_name": "Axis Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.54%"
+      },
+      {
+        "company_name": "Infosys Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.50%"
+      },
+      {
+        "company_name": "Larsen & Toubro Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.42%"
+      },
+      {
+        "company_name": "NTPC Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.12%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "2.10%"
+      },
+      {
+        "company_name": "Coal India Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.93%"
+      },
+      {
+        "company_name": "HCL Technologies Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.60%"
+      },
+      {
+        "company_name": "Maruti Suzuki India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.49%"
+      },
+      {
+        "company_name": "Kotak Mahindra Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.46%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "1.43%"
+      },
+      {
+        "company_name": "Tata Consultancy Services Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.34%"
+      },
+      {
+        "company_name": "ITC Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.25%"
+      },
+      {
+        "company_name": "Sun Pharmaceutical Industries Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.25%"
+      },
+      {
+        "company_name": "Lupin Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.15%"
+      },
+      {
+        "company_name": "Interglobe Aviation Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.04%"
+      },
+      {
+        "company_name": "Eternal Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.02%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.93%"
+      },
+      {
+        "company_name": "Mahindra & Mahindra Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.92%"
+      },
+      {
+        "company_name": "Bank Of Baroda",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.84%"
+      },
+      {
+        "company_name": "Hyundai Motor India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.82%"
+      },
+      {
+        "company_name": "SBI Life Insurance Company Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.79%"
+      },
+      {
+        "company_name": "Embassy Office Parks REIT",
+        "sector": "Construction",
+        "instrument_type": "REITs",
+        "allocation_percentage": "0.79%"
+      },
+      {
+        "company_name": "GAIL (India) Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.77%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.74%"
+      },
+      {
+        "company_name": "Bharat Petroleum Corporation Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.72%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.71%"
+      },
+      {
+        "company_name": "Hindustan Petroleum Corporation Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.70%"
+      },
+      {
+        "company_name": "Tata Steel Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.68%"
+      },
+      {
+        "company_name": "Power Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.66%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds/Deb",
+        "allocation_percentage": "0.61%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.58%"
+      },
+      {
+        "company_name": "State Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.57%"
+      },
+      {
+        "company_name": "Indusind Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.56%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.55%"
+      },
+      {
+        "company_name": "Brookfield India Real Estate Trust REIT",
+        "sector": "Construction",
+        "instrument_type": "REITs",
+        "allocation_percentage": "0.51%"
+      },
+      {
+        "company_name": "State Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.51%"
+      },
+      {
+        "company_name": "Divi's Laboratories Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.50%"
+      },
+      {
+        "company_name": "Pipeline Infrastructure (India) Pvt. Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.49%"
+      },
+      {
+        "company_name": "AU Small Finance Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.45%"
+      },
+      {
+        "company_name": "Jindal Steel Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.45%"
+      },
+      {
+        "company_name": "Hindustan Aeronautics Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.43%"
+      },
+      {
+        "company_name": "Apollo Tyres Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.41%"
+      },
+      {
+        "company_name": "Cholamandalam Investment and Finance Company Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.41%"
+      },
+      {
+        "company_name": "Canara HSBC Life Insurance Company Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.41%"
+      },
+      {
+        "company_name": "Vishal Mega Mart Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "Ambuja Cements Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "Apar Industries Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "Techno Electric & Engineering Company Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds/NCD",
+        "allocation_percentage": "0.38%"
+      },
+      {
+        "company_name": "Kaynes Technology India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.37%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.37%"
+      },
+      {
+        "company_name": "BEML Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.36%"
+      },
+      {
+        "company_name": "Gujarat Pipavav Port Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.36%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.36%"
+      },
+      {
+        "company_name": "Bajaj Auto Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.35%"
+      },
+      {
+        "company_name": "Ipca Laboratories Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.34%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.34%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.33%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.33%"
+      },
+      {
+        "company_name": "Oil And Natural Gas Corporation Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.33%"
+      },
+      {
+        "company_name": "Gujarat State",
+        "sector": "Construction",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.33%"
+      },
+      {
+        "company_name": "Mphasis Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "Bajaj Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds/NCD",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "Housing & Urban Development Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "WeWork India Management Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "Titagarh Rail Systems Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "Aurobindo Pharma Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.31%"
+      },
+      {
+        "company_name": "Bharat Dynamics Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.30%"
+      },
+      {
+        "company_name": "Adani Energy Solutions Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.29%"
+      },
+      {
+        "company_name": "Dynamatic Technologies Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.29%"
+      },
+      {
+        "company_name": "Hexaware Technologies Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.29%"
+      },
+      {
+        "company_name": "Bajaj Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.28%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.28%"
+      },
+      {
+        "company_name": "Britannia Industries Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "Aavas Financiers Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "United Spirits Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "Jamnagar Utilities and Power Pvt. Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "Powergrid Infrastructure Investment Trust",
+        "sector": "Services",
+        "instrument_type": "InvITs",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "J Kumar Infraprojects Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "Bharat Forge Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.25%"
+      },
+      {
+        "company_name": "Hindustan Unilever Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.25%"
+      },
+      {
+        "company_name": "Bajaj Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.24%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.24%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.24%"
+      },
+      {
+        "company_name": "Bajaj Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.24%"
+      },
+      {
+        "company_name": "HDB Financial Services Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.23%"
+      },
+      {
+        "company_name": "Bajaj Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.23%"
+      },
+      {
+        "company_name": "Bank Of Baroda",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.23%"
+      },
+      {
+        "company_name": "Punjab National Bank",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.23%"
+      },
+      {
+        "company_name": "Canara Bank",
+        "sector": "Financial",
+        "instrument_type": "CD",
+        "allocation_percentage": "0.23%"
+      },
+      {
+        "company_name": "Mishra Dhatu Nigam Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.23%"
+      },
+      {
+        "company_name": "India Universal Trust AL1",
+        "sector": "Others",
+        "instrument_type": "Sec. Debt",
+        "allocation_percentage": "0.22%"
+      },
+      {
+        "company_name": "Bank Of Baroda",
+        "sector": "Financial",
+        "instrument_type": "CD",
+        "allocation_percentage": "0.22%"
+      },
+      {
+        "company_name": "NHPC Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.22%"
+      },
+      {
+        "company_name": "Kalpataru Projects International Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.21%"
+      },
+      {
+        "company_name": "Ashoka Buildcon Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.21%"
+      },
+      {
+        "company_name": "Time Technoplast Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.20%"
+      },
+      {
+        "company_name": "Tega Industries Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.20%"
+      },
+      {
+        "company_name": "Ashok Leyland Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.20%"
+      },
+      {
+        "company_name": "Cholamandalam Investment and Finance Company Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Bosch Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "LMW Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "State Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Billionbrains Garage Ventures Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "National Housing Bank",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Mahanagar Telephone Nigam Ltd.",
+        "sector": "Communication",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Trent Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Godrej Properties Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.18%"
+      },
+      {
+        "company_name": "Bajaj Finserv Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.18%"
+      },
+      {
+        "company_name": "Madhya Pradesh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.18%"
+      },
+      {
+        "company_name": "CESC Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.18%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "CD",
+        "allocation_percentage": "0.18%"
+      },
+      {
+        "company_name": "India Universal Trust AL1",
+        "sector": "Others",
+        "instrument_type": "Sec. Debt",
+        "allocation_percentage": "0.17%"
+      },
+      {
+        "company_name": "Tata Motors Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.17%"
+      },
+      {
+        "company_name": "Glenmark Pharmaceuticals Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.17%"
+      },
+      {
+        "company_name": "Tech Mahindra Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.17%"
+      },
+      {
+        "company_name": "Garden Reach Shipbuilders & Engineers Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.16%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.16%"
+      },
+      {
+        "company_name": "National Housing Bank",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.16%"
+      },
+      {
+        "company_name": "Life Insurance Corporation of India",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.16%"
+      },
+      {
+        "company_name": "PCBL Chemical Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.16%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.15%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.15%"
+      },
+      {
+        "company_name": "Madhya Pradesh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.15%"
+      },
+      {
+        "company_name": "Cohance Lifesciences Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.15%"
+      },
+      {
+        "company_name": "Savita Oil Technologies Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.15%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.15%"
+      },
+      {
+        "company_name": "HDFC Life Insurance Co Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "Five-Star Business Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "Power Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "Kotak Mahindra Securities Ltd.",
+        "sector": "Financial",
+        "instrument_type": "CP",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "Power Grid Corporation Of India Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "SBI Cards And Payment Services Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Bharti Airtel Ltd. - (Partly Paid up Equity Shares (Rights Issue))",
+        "sector": "Communication",
+        "instrument_type": "PPE",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Cipla Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Shriram Finance Ltd",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Tata Motors Passenger Vehicles Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Tata Capital Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.12%"
+      },
+      {
+        "company_name": "JIO Financial Services Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.12%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.12%"
+      },
+      {
+        "company_name": "Housing & Urban Development Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.12%"
+      },
+      {
+        "company_name": "Bajaj Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.12%"
+      },
+      {
+        "company_name": "Uttar Pradesh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.12%"
+      },
+      {
+        "company_name": "Dr. Reddy's Laboratories Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "Asian Paints Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "Jamnagar Utilities and Power Pvt. Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "Pipeline Infrastructure (India) Pvt. Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "Indraprastha Gas Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "Whirlpool Of India Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.10%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.10%"
+      },
+      {
+        "company_name": "Power Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.10%"
+      },
+      {
+        "company_name": "Avenue Supermarts Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.10%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.10%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "National Housing Bank",
+        "sector": "Financial",
+        "instrument_type": "Bonds/NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Andhra Pradesh State",
+        "sector": "Financial",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "National Housing Bank",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Kotak Mahindra Investments Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds/NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Power Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Bajaj Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds/Deb",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Power Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Housing & Urban Development Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Julius Baer Capital India Pvt Ltd.",
+        "sector": "Financial",
+        "instrument_type": "CP",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Toyota Financial Services Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "FRB",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Power Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Kotak Mahindra Investments Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Housing & Urban Development Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Madhya Pradesh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "CG Power and Industrial Solutions Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Uttar Pradesh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "LG Electronics India Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Madhya Pradesh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Union Bank of India",
+        "sector": "Financial",
+        "instrument_type": "CD",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Texmaco Rail & Engineering Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "JSW Energy Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Aditya Birla Sun Life AMC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.09%"
+      },
+      {
+        "company_name": "Gujarat State",
+        "sector": "Construction",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.08%"
+      },
+      {
+        "company_name": "Gujarat Industries Power Company Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.08%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.08%"
+      },
+      {
+        "company_name": "Andhra Pradesh State",
+        "sector": "Financial",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.07%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.07%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.07%"
+      },
+      {
+        "company_name": "L&T Metro Rail (Hyderabad) Ltd.",
+        "sector": "Construction",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.07%"
+      },
+      {
+        "company_name": "ITC Hotels Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.07%"
+      },
+      {
+        "company_name": "Home First Finance Company India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.07%"
+      },
+      {
+        "company_name": "Rajasthan State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "Zee Entertainment Enterprises Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "Andhra Pradesh State",
+        "sector": "Financial",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "Torrent Power Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "Aegis Vopak Terminals Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "Housing & Urban Development Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "Andhra Pradesh State",
+        "sector": "Financial",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "Shriram Finance Ltd",
+        "sector": "Financial",
+        "instrument_type": "Sec. Debt",
+        "allocation_percentage": "0.06%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "360 One Wam Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Canara Bank",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Info Edge (India) Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Bharti Hexacom Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Bandhan Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Gujarat State",
+        "sector": "Construction",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds/NCD",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Union Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Add. Tier 1 Bond",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Grasim Industries Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Indian Oil Corporation Ltd.",
+        "sector": "Energy",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Grasim Industries Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Power Grid Corporation Of India Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Bonds/NCD",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Alkem Laboratories Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Power Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Bajaj Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Small Industries Devp. Bank of India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Sundaram Home Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Muthoot Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "CP",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Vodafone Idea Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Maharashtra State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Housing & Urban Development Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Maharashtra State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Gujarat State",
+        "sector": "Construction",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "RHI Magnesita India Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "Fortis Healthcare Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "Blue Dart Express Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "Colgate-Palmolive (India) Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "Tenneco Clean Air India Ltd",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "ICICI Prudential Asset Management Company Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "Gujarat State",
+        "sector": "Construction",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "Medi Assist Healthcare Services Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "LIC Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "NCD",
+        "allocation_percentage": "0.04%"
+      },
+      {
+        "company_name": "REC Ltd.",
+        "sector": "Financial",
+        "instrument_type": "ZCB",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "Ceigall India Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "FD",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "Uttar Pradesh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "Adani Ports and Special Economic Zone Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "Gujarat State",
+        "sector": "Construction",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "Chambal Fertilisers and Chemicals Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.03%"
+      },
+      {
+        "company_name": "Ramco Systems Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "Indian Railway Finance Corporation Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Debenture",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "National Bank For Agriculture & Rural Development",
+        "sector": "Financial",
+        "instrument_type": "Bonds",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "The Great Eastern Shipping Company Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "BEML Land Assets Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "Maharashtra State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "TruAlt Bioenergy Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "Varun Beverages Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "Bajaj Housing Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "L&T Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.02%"
+      },
+      {
+        "company_name": "Fusion Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "Rites Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "Union Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "UPL Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "Emcure Pharmaceuticals Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "Campus Activewear Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "Star Health and Allied Insurance Company Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "Maharashtra State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "Aditya Infotech Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.01%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "Kwality Wall's (India) Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "AGS Transact Technologies Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "Chhattisgarh State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "Kerala State",
+        "sector": "Others",
+        "instrument_type": "SDL",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "S Chand And Company Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "Tata Consumer Products Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "Indus Towers Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.00%"
+      },
+      {
+        "company_name": "MEP Infrastructure Developers Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.00%"
+      }
+    ],
+    "equity_sector_allocation": {
+      "Financial": "33.43%",
+      "Technology": "15.24%",
+      "Energy & Utilities": "13.89%",
+      "Industrials": "12.14%",
+      "Consumer Discretionary": "7.98%",
+      "Materials": "6.44%",
+      "Healthcare": "6.19%",
+      "Consumer Staples": "3.82%",
+      "Diversified": "0.57%",
+      "Real Estate": "0.30%"
+    },
+    "debt_sector_allocation": {
+      "Financial": "53.88%",
+      "Sovereign": "27.91%",
+      "Construction": "9.52%",
+      "Others": "4.82%",
+      "Capital Goods": "1.38%",
+      "Services": "0.97%",
+      "Energy": "0.84%",
+      "Communication": "0.68%"
+    },
+    "portfolio_composition": {
+      "equity": "67.93%",
+      "debt": "26.08%",
+      "cash": "4.41%",
+      "real estate": "1.57%"
+    },
+    "investment_requirements": {
+      "minimum_first_investment": "₹100",
+      "minimum_sip": "₹100",
+      "minimum_additional_investment": ""
+    },
+    "exit_load_details": {
+      "exit_load": "Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year.",
+      "stamp_duty": "Stamp duty on investment: 0.005% (from July 1st, 2020)from July 1st 2020Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+      "tax_implication": "Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.Check past data"
+    }
+  },
+  {
+    "fund_name": "HDFC Flexi Cap Direct Plan Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth",
+    "fund_category": "Equity",
+    "fund_sub_category": "Flexi Cap",
+    "risk_level": "Very High Risk",
+    "nav": "₹2,210.39",
+    "nav_date": "05 Mar '26",
+    "expense_ratio": "0.70%",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹97,451.56 Cr",
+    "performance_metrics": {
+      "three_year_annualised_return": "+21.9%",
+      "one_day_return": "+0.73%"
+    },
+    "historical_returns": {
+      "1_year_total_investment": "₹1,200",
+      "1_year_would_become": "₹1,216",
+      "1_year_return": "+1.33%",
+      "3_years_total_investment": "₹3,600",
+      "3_years_would_become": "₹4,418",
+      "3_years_return": "+22.72%",
+      "5_years_total_investment": "₹6,000",
+      "5_years_would_become": "₹9,407",
+      "5_years_return": "+56.78%",
+      "10_years_total_investment": "₹12,000",
+      "10_years_would_become": "₹31,233",
+      "10_years_return": "+160.27%"
+    },
+    "annualised_returns": {
+      "fund_return_3y": "+21.9%",
+      "fund_return_5y": "+20.4%",
+      "fund_return_10y": "+18.4%",
+      "fund_return_all": "+16.5%",
+      "category_avg_3y": "+16.0%",
+      "category_avg_5y": "+15.6%",
+      "category_avg_10y": "+13.5%",
+      "category_avg_all": "--",
+      "rank_3y": "6",
+      "rank_5y": "3",
+      "rank_10y": "1",
+      "rank_all": "--"
+    },
+    "holdings": [
+      {
+        "company_name": "ICICI Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "8.90%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "7.82%"
+      },
+      {
+        "company_name": "Axis Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "7.59%"
+      },
+      {
+        "company_name": "State Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.86%"
+      },
+      {
+        "company_name": "SBI Life Insurance Company Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.10%"
+      },
+      {
+        "company_name": "Kotak Mahindra Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.81%"
+      },
+      {
+        "company_name": "HCL Technologies Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.13%"
+      },
+      {
+        "company_name": "Maruti Suzuki India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.00%"
+      },
+      {
+        "company_name": "Cipla Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.85%"
+      },
+      {
+        "company_name": "Power Grid Corporation Of India Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.40%"
+      },
+      {
+        "company_name": "Eicher Motors Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.34%"
+      },
+      {
+        "company_name": "Bharti Airtel Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.22%"
+      },
+      {
+        "company_name": "Hyundai Motor India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.03%"
+      },
+      {
+        "company_name": "Bajaj Auto Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.97%"
+      },
+      {
+        "company_name": "Infosys Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.80%"
+      },
+      {
+        "company_name": "JSW Steel Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.77%"
+      },
+      {
+        "company_name": "Nexus Select Trust",
+        "sector": "Construction",
+        "instrument_type": "REITs",
+        "allocation_percentage": "1.74%"
+      },
+      {
+        "company_name": "Bank Of Baroda",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.60%"
+      },
+      {
+        "company_name": "Tata Steel Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.59%"
+      },
+      {
+        "company_name": "Oil And Natural Gas Corporation Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.52%"
+      },
+      {
+        "company_name": "Piramal Pharma Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.43%"
+      },
+      {
+        "company_name": "Bosch Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.14%"
+      },
+      {
+        "company_name": "Larsen & Toubro Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.95%"
+      },
+      {
+        "company_name": "Interglobe Aviation Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.94%"
+      },
+      {
+        "company_name": "Lupin Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.93%"
+      },
+      {
+        "company_name": "United Spirits Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.80%"
+      },
+      {
+        "company_name": "FSN E-Commerce Ventures Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.76%"
+      },
+      {
+        "company_name": "Havells India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.65%"
+      },
+      {
+        "company_name": "Cyient Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.64%"
+      },
+      {
+        "company_name": "Nuvoco Vistas Corporation Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.62%"
+      },
+      {
+        "company_name": "Hindalco Industries Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.59%"
+      },
+      {
+        "company_name": "Varroc Engineering Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.59%"
+      },
+      {
+        "company_name": "Dr. Lal Pathlabs Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.58%"
+      },
+      {
+        "company_name": "Embassy Office Parks REIT",
+        "sector": "Construction",
+        "instrument_type": "REITs",
+        "allocation_percentage": "0.58%"
+      },
+      {
+        "company_name": "Tata Consultancy Services Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.48%"
+      },
+      {
+        "company_name": "Kalpataru Projects International Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.47%"
+      },
+      {
+        "company_name": "The Ramco Cements Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.46%"
+      },
+      {
+        "company_name": "Apollo Hospitals Enterprise Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.46%"
+      },
+      {
+        "company_name": "CIE Automotive India Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.43%"
+      },
+      {
+        "company_name": "Escorts Kubota Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.42%"
+      },
+      {
+        "company_name": "Ashok Leyland Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.41%"
+      },
+      {
+        "company_name": "JK Lakshmi Cement Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.40%"
+      },
+      {
+        "company_name": "Eternal Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.40%"
+      },
+      {
+        "company_name": "Sapphire Foods India Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "Sundram Fasteners Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.33%"
+      },
+      {
+        "company_name": "Crompton Greaves Consumer Electricals Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.33%"
+      },
+      {
+        "company_name": "Metropolis Healthcare Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.31%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.30%"
+      },
+      {
+        "company_name": "Swiggy Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.29%"
+      },
+      {
+        "company_name": "Restaurant Brands Asia Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.22%"
+      },
+      {
+        "company_name": "Birlasoft Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.18%"
+      },
+      {
+        "company_name": "Cohance Lifesciences Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.16%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.12%"
+      },
+      {
+        "company_name": "GOI",
+        "sector": "Sovereign",
+        "instrument_type": "GOI Sec",
+        "allocation_percentage": "0.11%"
+      },
+      {
+        "company_name": "Ramco Systems Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.06%"
+      }
+    ],
+    "equity_sector_allocation": {
+      "Financial": "47.10%",
+      "Consumer Discretionary": "16.87%",
+      "Technology": "11.20%",
+      "Healthcare": "8.18%",
+      "Materials": "6.61%",
+      "Energy & Utilities": "4.77%",
+      "Industrials": "4.29%",
+      "Consumer Staples": "0.97%"
+    },
+    "debt_sector_allocation": {},
+    "portfolio_composition": {
+      "equity": "82.12%",
+      "cash": "15.03%",
+      "real estate": "2.32%",
+      "debt": "0.53%"
+    },
+    "investment_requirements": {
+      "minimum_first_investment": "₹100",
+      "minimum_sip": "₹100",
+      "minimum_additional_investment": ""
+    },
+    "exit_load_details": {
+      "exit_load": "Exit load of 1% if redeemed within 1 year",
+      "stamp_duty": "Stamp duty on investment: 0.005% (from July 1st, 2020)from July 1st 2020Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+      "tax_implication": "Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.Check past data"
+    }
+  },
+  {
+    "fund_name": "HDFC Mid Cap Fund Direct Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-mid-cap-fund-direct-growth",
+    "fund_category": "Equity",
+    "fund_sub_category": "Mid Cap",
+    "risk_level": "Very High Risk",
+    "nav": "₹217.05",
+    "nav_date": "05 Mar '26",
+    "expense_ratio": "0.76%",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹92,186.87 Cr",
+    "performance_metrics": {
+      "three_year_annualised_return": "+25.4%",
+      "one_day_return": "+1.14%"
+    },
+    "historical_returns": {
+      "1_year_total_investment": "₹1,200",
+      "1_year_would_become": "₹1,226",
+      "1_year_return": "+2.17%",
+      "3_years_total_investment": "₹3,600",
+      "3_years_would_become": "₹4,440",
+      "3_years_return": "+23.33%",
+      "5_years_total_investment": "₹6,000",
+      "5_years_would_become": "₹9,780",
+      "5_years_return": "+63.00%",
+      "10_years_total_investment": "₹12,000",
+      "10_years_would_become": "₹34,127",
+      "10_years_return": "+184.39%"
+    },
+    "annualised_returns": {
+      "fund_return_3y": "+25.4%",
+      "fund_return_5y": "+22.2%",
+      "fund_return_10y": "+19.8%",
+      "fund_return_all": "+20.4%",
+      "category_avg_3y": "+21.6%",
+      "category_avg_5y": "+21.5%",
+      "category_avg_10y": "+16.0%",
+      "category_avg_all": "--",
+      "rank_3y": "7",
+      "rank_5y": "3",
+      "rank_10y": "5",
+      "rank_all": "--"
+    },
+    "holdings": [
+      {
+        "company_name": "Max Financial Services Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.51%"
+      },
+      {
+        "company_name": "AU Small Finance Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.19%"
+      },
+      {
+        "company_name": "The Federal Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.99%"
+      },
+      {
+        "company_name": "Indian Bank",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.64%"
+      },
+      {
+        "company_name": "Balkrishna Industries Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.31%"
+      },
+      {
+        "company_name": "Ipca Laboratories Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.87%"
+      },
+      {
+        "company_name": "Coforge Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.80%"
+      },
+      {
+        "company_name": "Glenmark Pharmaceuticals Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.77%"
+      },
+      {
+        "company_name": "Fortis Healthcare Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.62%"
+      },
+      {
+        "company_name": "Hindustan Petroleum Corporation Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.57%"
+      },
+      {
+        "company_name": "Mahindra & Mahindra Financial Services Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.52%"
+      },
+      {
+        "company_name": "Marico Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.38%"
+      },
+      {
+        "company_name": "Vishal Mega Mart Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.37%"
+      },
+      {
+        "company_name": "Apollo Tyres Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.24%"
+      },
+      {
+        "company_name": "Persistent Systems Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.19%"
+      },
+      {
+        "company_name": "Cummins India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.01%"
+      },
+      {
+        "company_name": "Tata Communications Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.90%"
+      },
+      {
+        "company_name": "Union Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.90%"
+      },
+      {
+        "company_name": "Jindal Steel Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.81%"
+      },
+      {
+        "company_name": "Aurobindo Pharma Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.75%"
+      },
+      {
+        "company_name": "Dabur India Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.69%"
+      },
+      {
+        "company_name": "Alkem Laboratories Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.60%"
+      },
+      {
+        "company_name": "Mphasis Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.51%"
+      },
+      {
+        "company_name": "Bosch Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.47%"
+      },
+      {
+        "company_name": "AIA Engineering Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.44%"
+      },
+      {
+        "company_name": "Delhivery Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.41%"
+      },
+      {
+        "company_name": "Karur Vysya Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.30%"
+      },
+      {
+        "company_name": "PB Fintech Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.28%"
+      },
+      {
+        "company_name": "United Spirits Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.24%"
+      },
+      {
+        "company_name": "Coromandel International Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.22%"
+      },
+      {
+        "company_name": "Gland Pharma Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.22%"
+      },
+      {
+        "company_name": "Hexaware Technologies Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.12%"
+      },
+      {
+        "company_name": "Eternal Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.07%"
+      },
+      {
+        "company_name": "Star Health and Allied Insurance Company Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.05%"
+      },
+      {
+        "company_name": "Redington Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.04%"
+      },
+      {
+        "company_name": "The Indian Hotels Company Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.03%"
+      },
+      {
+        "company_name": "Bharat Forge Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.01%"
+      },
+      {
+        "company_name": "Indraprastha Gas Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.99%"
+      },
+      {
+        "company_name": "Nippon Life India Asset Management Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.95%"
+      },
+      {
+        "company_name": "Indusind Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.90%"
+      },
+      {
+        "company_name": "Godrej Consumer Products Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.90%"
+      },
+      {
+        "company_name": "Escorts Kubota Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.88%"
+      },
+      {
+        "company_name": "City Union Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.85%"
+      },
+      {
+        "company_name": "ACC Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.84%"
+      },
+      {
+        "company_name": "Sundram Fasteners Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.75%"
+      },
+      {
+        "company_name": "Timken India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.70%"
+      },
+      {
+        "company_name": "SKF India (Industrial) Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.69%"
+      },
+      {
+        "company_name": "Crompton Greaves Consumer Electricals Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.69%"
+      },
+      {
+        "company_name": "KEC International Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.65%"
+      },
+      {
+        "company_name": "Supreme Industries Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.63%"
+      },
+      {
+        "company_name": "Dixon Technologies (India) Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.58%"
+      },
+      {
+        "company_name": "Sona BLW Precision Forgings Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.54%"
+      },
+      {
+        "company_name": "Gujarat Fluorochemicals Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.46%"
+      },
+      {
+        "company_name": "SKF India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.43%"
+      },
+      {
+        "company_name": "Cholamandalam Financial Holdings Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.41%"
+      },
+      {
+        "company_name": "Vesuvius India Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.40%"
+      },
+      {
+        "company_name": "Emami Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "Symphony Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.37%"
+      },
+      {
+        "company_name": "Ceat Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.37%"
+      },
+      {
+        "company_name": "Vardhman Textiles Ltd.",
+        "sector": "Textiles",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.34%"
+      },
+      {
+        "company_name": "Greenlam Industries Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "Aarti Industries Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.31%"
+      },
+      {
+        "company_name": "Oracle Financial Services Software Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.29%"
+      },
+      {
+        "company_name": "Arvind Ltd.",
+        "sector": "Textiles",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.28%"
+      },
+      {
+        "company_name": "ICICI Lombard General Insurance Company Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.26%"
+      },
+      {
+        "company_name": "Navneet Education Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.24%"
+      },
+      {
+        "company_name": "Bharti Hexacom Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.23%"
+      },
+      {
+        "company_name": "Five-Star Business Finance Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Billionbrains Garage Ventures Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.19%"
+      },
+      {
+        "company_name": "Colgate-Palmolive (India) Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.18%"
+      },
+      {
+        "company_name": "KNR Constructions Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.17%"
+      },
+      {
+        "company_name": "LG Electronics India Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.16%"
+      },
+      {
+        "company_name": "Dhanuka Agritech Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Greenpanel Industries Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Greenply Industries Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.13%"
+      },
+      {
+        "company_name": "Jagran Prakashan Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "ICICI Prudential Asset Management Company Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.04%"
+      }
+    ],
+    "equity_sector_allocation": {
+      "Financial": "29.95%",
+      "Healthcare": "13.64%",
+      "Consumer Discretionary": "13.43%",
+      "Technology": "12.92%",
+      "Consumer Staples": "9.73%",
+      "Industrials": "9.49%",
+      "Materials": "6.36%",
+      "Energy & Utilities": "3.79%",
+      "Diversified": "0.69%"
+    },
+    "debt_sector_allocation": {},
+    "portfolio_composition": {
+      "equity": "94.05%",
+      "cash": "5.95%"
+    },
+    "investment_requirements": {
+      "minimum_first_investment": "₹100",
+      "minimum_sip": "₹100",
+      "minimum_additional_investment": ""
+    },
+    "exit_load_details": {
+      "exit_load": "Exit load of 1% if redeemed within 1 year.",
+      "stamp_duty": "Stamp duty on investment: 0.005% (from July 1st, 2020)from July 1st 2020Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+      "tax_implication": "Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.Check past data"
+    }
+  },
+  {
+    "fund_name": "HDFC Large Cap Fund Direct Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth",
+    "fund_category": "Equity",
+    "fund_sub_category": "Large Cap",
+    "risk_level": "Very High Risk",
+    "nav": "₹1,235.91",
+    "nav_date": "05 Mar '26",
+    "expense_ratio": "1.01%",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹39,620.90 Cr",
+    "performance_metrics": {
+      "three_year_annualised_return": "+15.8%",
+      "one_day_return": "+1.07%"
+    },
+    "historical_returns": {
+      "1_year_total_investment": "₹1,200",
+      "1_year_would_become": "₹1,183",
+      "1_year_return": "-1.42%",
+      "3_years_total_investment": "₹3,600",
+      "3_years_would_become": "₹4,477",
+      "3_years_return": "+24.36%",
+      "5_years_total_investment": "₹6,000",
+      "5_years_would_become": "₹9,465",
+      "5_years_return": "+57.75%",
+      "10_years_total_investment": "₹12,000",
+      "10_years_would_become": "₹26,181",
+      "10_years_return": "+118.18%"
+    },
+    "annualised_returns": {
+      "fund_return_3y": "+15.8%",
+      "fund_return_5y": "+14.6%",
+      "fund_return_10y": "+15.2%",
+      "fund_return_all": "+13.6%",
+      "category_avg_3y": "+15.1%",
+      "category_avg_5y": "+15.0%",
+      "category_avg_10y": "+13.2%",
+      "category_avg_all": "--",
+      "rank_3y": "40",
+      "rank_5y": "7",
+      "rank_10y": "5",
+      "rank_all": "--"
+    },
+    "holdings": [
+      {
+        "company_name": "ICICI Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "9.31%"
+      },
+      {
+        "company_name": "HDFC Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "8.97%"
+      },
+      {
+        "company_name": "Bharti Airtel Ltd.",
+        "sector": "Communication",
+        "instrument_type": "Equity",
+        "allocation_percentage": "5.92%"
+      },
+      {
+        "company_name": "Reliance Industries Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "5.55%"
+      },
+      {
+        "company_name": "Kotak Mahindra Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "5.25%"
+      },
+      {
+        "company_name": "Titan Company Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.14%"
+      },
+      {
+        "company_name": "Axis Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.71%"
+      },
+      {
+        "company_name": "Infosys Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.57%"
+      },
+      {
+        "company_name": "Torrent Pharmaceuticals Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.18%"
+      },
+      {
+        "company_name": "Bajaj Auto Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.90%"
+      },
+      {
+        "company_name": "Ambuja Cements Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.87%"
+      },
+      {
+        "company_name": "Bajaj Finserv Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.68%"
+      },
+      {
+        "company_name": "Lupin Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.51%"
+      },
+      {
+        "company_name": "NTPC Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.20%"
+      },
+      {
+        "company_name": "Cholamandalam Investment and Finance Company Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.16%"
+      },
+      {
+        "company_name": "Eternal Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.08%"
+      },
+      {
+        "company_name": "Tata Motors Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.99%"
+      },
+      {
+        "company_name": "State Bank of India",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.73%"
+      },
+      {
+        "company_name": "United Spirits Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.64%"
+      },
+      {
+        "company_name": "Interglobe Aviation Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.52%"
+      },
+      {
+        "company_name": "Mankind Pharma Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.47%"
+      },
+      {
+        "company_name": "Tata Consumer Products Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.45%"
+      },
+      {
+        "company_name": "Havells India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.40%"
+      },
+      {
+        "company_name": "Indusind Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.40%"
+      },
+      {
+        "company_name": "Adani Ports and Special Economic Zone Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.37%"
+      },
+      {
+        "company_name": "Maruti Suzuki India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.32%"
+      },
+      {
+        "company_name": "Larsen & Toubro Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.30%"
+      },
+      {
+        "company_name": "Hyundai Motor India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.21%"
+      },
+      {
+        "company_name": "Max Healthcare Institute Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.21%"
+      },
+      {
+        "company_name": "Vishal Mega Mart Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.20%"
+      },
+      {
+        "company_name": "Eicher Motors Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.13%"
+      },
+      {
+        "company_name": "Ultratech Cement Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.04%"
+      },
+      {
+        "company_name": "ICICI Prudential Asset Management Company Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.03%"
+      },
+      {
+        "company_name": "SRF Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.99%"
+      },
+      {
+        "company_name": "Sun Pharmaceutical Industries Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.88%"
+      },
+      {
+        "company_name": "Dabur India Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.88%"
+      },
+      {
+        "company_name": "Mahindra & Mahindra Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.86%"
+      },
+      {
+        "company_name": "Tata Motors Passenger Vehicles Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.70%"
+      },
+      {
+        "company_name": "Hindalco Industries Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.63%"
+      },
+      {
+        "company_name": "Swiggy Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.53%"
+      },
+      {
+        "company_name": "DLF Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.34%"
+      },
+      {
+        "company_name": "Tata Capital Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "CG Power and Industrial Solutions Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "Billionbrains Garage Ventures Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.26%"
+      },
+      {
+        "company_name": "Cummins India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.24%"
+      },
+      {
+        "company_name": "SBI Life Insurance Company Ltd.",
+        "sector": "Insurance",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.20%"
+      }
+    ],
+    "equity_sector_allocation": {
+      "Financial": "37.97%",
+      "Consumer Discretionary": "14.01%",
+      "Technology": "12.41%",
+      "Healthcare": "9.49%",
+      "Energy & Utilities": "7.95%",
+      "Industrials": "6.86%",
+      "Materials": "5.67%",
+      "Consumer Staples": "5.30%",
+      "Real Estate": "0.35%"
+    },
+    "debt_sector_allocation": {},
+    "portfolio_composition": {
+      "equity": "97.51%",
+      "cash": "2.49%"
+    },
+    "investment_requirements": {
+      "minimum_first_investment": "₹100",
+      "minimum_sip": "₹100",
+      "minimum_additional_investment": ""
+    },
+    "exit_load_details": {
+      "exit_load": "Exit load of 1% if redeemed within 1 year",
+      "stamp_duty": "Stamp duty on investment: 0.005% (from July 1st, 2020)from July 1st 2020Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+      "tax_implication": "Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.Check past data"
+    }
+  },
+  {
+    "fund_name": "HDFC Small Cap Fund Direct Growth",
+    "source_url": "https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth",
+    "fund_category": "Equity",
+    "fund_sub_category": "Small Cap",
+    "risk_level": "Very High Risk",
+    "nav": "₹148.23",
+    "nav_date": "05 Mar '26",
+    "expense_ratio": "0.74%",
+    "minimum_sip": "₹100",
+    "fund_size_aum": "₹36,940.54 Cr",
+    "performance_metrics": {
+      "three_year_annualised_return": "+18.1%",
+      "one_day_return": "+0.77%"
+    },
+    "historical_returns": {
+      "1_year_total_investment": "₹1,200",
+      "1_year_would_become": "₹1,063",
+      "1_year_return": "-11.42%",
+      "3_years_total_investment": "₹3,600",
+      "3_years_would_become": "₹4,341",
+      "3_years_return": "+20.58%",
+      "5_years_total_investment": "₹6,000",
+      "5_years_would_become": "₹10,441",
+      "5_years_return": "+74.02%",
+      "10_years_total_investment": "₹12,000",
+      "10_years_would_become": "₹32,353",
+      "10_years_return": "+169.61%"
+    },
+    "annualised_returns": {
+      "fund_return_3y": "+18.1%",
+      "fund_return_5y": "+20.5%",
+      "fund_return_10y": "+19.6%",
+      "fund_return_all": "+18.5%",
+      "category_avg_3y": "+19.7%",
+      "category_avg_5y": "+22.6%",
+      "category_avg_10y": "+16.1%",
+      "category_avg_all": "--",
+      "rank_3y": "19",
+      "rank_5y": "5",
+      "rank_10y": "3",
+      "rank_all": "--"
+    },
+    "holdings": [
+      {
+        "company_name": "Firstsource Solutions Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "4.79%"
+      },
+      {
+        "company_name": "Bank Of Baroda",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.80%"
+      },
+      {
+        "company_name": "eClerx Services Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.78%"
+      },
+      {
+        "company_name": "Aster DM Healthcare Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "3.58%"
+      },
+      {
+        "company_name": "Eris Lifesciences Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.44%"
+      },
+      {
+        "company_name": "Indian Bank",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.39%"
+      },
+      {
+        "company_name": "Gabriel India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.34%"
+      },
+      {
+        "company_name": "Fortis Healthcare Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "2.18%"
+      },
+      {
+        "company_name": "Krishna Institute of Medical Sciences Ltd",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.82%"
+      },
+      {
+        "company_name": "The Great Eastern Shipping Company Ltd.",
+        "sector": "Energy",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.70%"
+      },
+      {
+        "company_name": "Sonata Software Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.67%"
+      },
+      {
+        "company_name": "City Union Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.63%"
+      },
+      {
+        "company_name": "Godrej Consumer Products Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.62%"
+      },
+      {
+        "company_name": "The Federal Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.62%"
+      },
+      {
+        "company_name": "Home First Finance Company India Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.56%"
+      },
+      {
+        "company_name": "Sharda Cropchem Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.52%"
+      },
+      {
+        "company_name": "Suprajit Engineering Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.44%"
+      },
+      {
+        "company_name": "Kalpataru Projects International Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.44%"
+      },
+      {
+        "company_name": "Chalet Hotels Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.41%"
+      },
+      {
+        "company_name": "Sudarshan Chemical Industries Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.41%"
+      },
+      {
+        "company_name": "Timken India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.38%"
+      },
+      {
+        "company_name": "Transport Corporation Of India Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.37%"
+      },
+      {
+        "company_name": "Blue Dart Express Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.34%"
+      },
+      {
+        "company_name": "Dodla Dairy Ltd",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.31%"
+      },
+      {
+        "company_name": "LG Balakrishnan & Bros Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.28%"
+      },
+      {
+        "company_name": "Equitas Small Finance Bank Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.27%"
+      },
+      {
+        "company_name": "Power Mech Projects Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.27%"
+      },
+      {
+        "company_name": "Zensar Technologies Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.27%"
+      },
+      {
+        "company_name": "Aditya Vision Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.19%"
+      },
+      {
+        "company_name": "Pearl Global Industries Ltd.",
+        "sector": "Textiles",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.16%"
+      },
+      {
+        "company_name": "JK Tyre & Industries Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.11%"
+      },
+      {
+        "company_name": "Kei Industries Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.10%"
+      },
+      {
+        "company_name": "Vardhman Textiles Ltd.",
+        "sector": "Textiles",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.10%"
+      },
+      {
+        "company_name": "PVR Inox Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.10%"
+      },
+      {
+        "company_name": "Apar Industries Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.09%"
+      },
+      {
+        "company_name": "CIE Automotive India Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.08%"
+      },
+      {
+        "company_name": "Fiem Industries Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.07%"
+      },
+      {
+        "company_name": "VRL Logistics Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.05%"
+      },
+      {
+        "company_name": "Chambal Fertilisers and Chemicals Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.02%"
+      },
+      {
+        "company_name": "Vishal Mega Mart Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.01%"
+      },
+      {
+        "company_name": "Akzo Nobel India Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.01%"
+      },
+      {
+        "company_name": "Redington Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "1.00%"
+      },
+      {
+        "company_name": "Kirloskar Ferrous Industries Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.96%"
+      },
+      {
+        "company_name": "Tega Industries Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.93%"
+      },
+      {
+        "company_name": "KEC International Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.90%"
+      },
+      {
+        "company_name": "Shoppers Stop Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.88%"
+      },
+      {
+        "company_name": "UTI Asset Management Company Ltd.",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.86%"
+      },
+      {
+        "company_name": "SKF India (Industrial) Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.82%"
+      },
+      {
+        "company_name": "Tata Steel Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.81%"
+      },
+      {
+        "company_name": "Voltamp Transformers Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.77%"
+      },
+      {
+        "company_name": "PNC Infratech Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.77%"
+      },
+      {
+        "company_name": "Redtape Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.75%"
+      },
+      {
+        "company_name": "The Anup Engineering Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.71%"
+      },
+      {
+        "company_name": "Bajaj Electricals Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.70%"
+      },
+      {
+        "company_name": "Awfis Space Solutions Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.69%"
+      },
+      {
+        "company_name": "Aadhar Housing Finance Ltd",
+        "sector": "Financial",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.67%"
+      },
+      {
+        "company_name": "Indigo Paints Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.67%"
+      },
+      {
+        "company_name": "NRB Bearings Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.60%"
+      },
+      {
+        "company_name": "Lumax Industries Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.59%"
+      },
+      {
+        "company_name": "GMM Pfaudler Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.56%"
+      },
+      {
+        "company_name": "Unichem Laboratories Ltd.",
+        "sector": "Healthcare",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.55%"
+      },
+      {
+        "company_name": "Gateway Distriparks Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.54%"
+      },
+      {
+        "company_name": "Vesuvius India Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.53%"
+      },
+      {
+        "company_name": "SKF India Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.51%"
+      },
+      {
+        "company_name": "Bajaj Consumer Care Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.50%"
+      },
+      {
+        "company_name": "La Opala RG Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.50%"
+      },
+      {
+        "company_name": "Emami Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.44%"
+      },
+      {
+        "company_name": "Insecticides (India) Ltd.",
+        "sector": "Chemicals",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.42%"
+      },
+      {
+        "company_name": "Gujarat Pipavav Port Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.40%"
+      },
+      {
+        "company_name": "GR Infraprojects Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.39%"
+      },
+      {
+        "company_name": "Ion Exchange (India) Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.36%"
+      },
+      {
+        "company_name": "IFGL Refractories Ltd.",
+        "sector": "Construction",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.33%"
+      },
+      {
+        "company_name": "D.B. Corp Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "GNA Axles Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.32%"
+      },
+      {
+        "company_name": "Sula Vineyards Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.30%"
+      },
+      {
+        "company_name": "Goodyear India Ltd.",
+        "sector": "Automobile",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.27%"
+      },
+      {
+        "company_name": "Wakefit Innovations Ltd.",
+        "sector": "Consumer Discretionary",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.26%"
+      },
+      {
+        "company_name": "Mastek Ltd.",
+        "sector": "Technology",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.24%"
+      },
+      {
+        "company_name": "Brainbees Solutions Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.20%"
+      },
+      {
+        "company_name": "BEML Ltd.",
+        "sector": "Capital Goods",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.20%"
+      },
+      {
+        "company_name": "Greenlam Industries Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.17%"
+      },
+      {
+        "company_name": "TCI Express Ltd.",
+        "sector": "Services",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.17%"
+      },
+      {
+        "company_name": "Carborundum Universal Ltd.",
+        "sector": "Metals & Mining",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.14%"
+      },
+      {
+        "company_name": "TCPL Packaging Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.05%"
+      },
+      {
+        "company_name": "Jagran Prakashan Ltd.",
+        "sector": "Consumer Staples",
+        "instrument_type": "Equity",
+        "allocation_percentage": "0.03%"
+      }
+    ],
+    "equity_sector_allocation": {
+      "Industrials": "26.94%",
+      "Consumer Discretionary": "19.09%",
+      "Financial": "15.08%",
+      "Healthcare": "11.55%",
+      "Materials": "8.94%",
+      "Technology": "8.70%",
+      "Consumer Staples": "5.66%",
+      "Diversified": "2.17%",
+      "Energy & Utilities": "1.86%"
+    },
+    "debt_sector_allocation": {},
+    "portfolio_composition": {
+      "equity": "91.50%",
+      "cash": "8.50%"
+    },
+    "investment_requirements": {
+      "minimum_first_investment": "₹100",
+      "minimum_sip": "₹100",
+      "minimum_additional_investment": ""
+    },
+    "exit_load_details": {
+      "exit_load": "Exit load of 1% if redeemed within 1 year",
+      "stamp_duty": "Stamp duty on investment: 0.005% (from July 1st, 2020)from July 1st 2020Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+      "tax_implication": "Tax implicationIf you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.Check past data"
+    }
+  }
+]

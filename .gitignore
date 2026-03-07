@@ -1,0 +1,25 @@
+# Environment Variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Data Outputs (Phase 1, 2, 3)
+**/output/
+raw_html/
+structured/
+
+# Temporary files
+/tmp/
+*.log
+
+# Editor-specific
+.vscode/
+.idea/
+.gemini/

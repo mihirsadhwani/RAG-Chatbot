@@ -1,0 +1,8 @@
+# Phase 5 - Backend dependencies
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+python-dotenv>=0.21.0
+google-generativeai>=0.8.0
+numpy>=1.22.0
+chromadb>=0.4.0
