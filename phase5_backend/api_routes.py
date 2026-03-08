@@ -1,8 +1,8 @@
 from datetime import datetime, timezone
 from fastapi import APIRouter
-from .schemas import ChatRequest, ChatResponse
-from .guardrails import validate_query
-from .rag_service import RAGService
+from schemas import ChatRequest, ChatResponse
+from guardrails import validate_query
+from rag_service import RAGService
 
 router = APIRouter()
 
