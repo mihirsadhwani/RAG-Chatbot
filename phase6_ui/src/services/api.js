@@ -1,4 +1,4 @@
-const API_BASE = '';
+const API_BASE = 'https://rag-chatbot-p0d5.onrender.com';
 
 export async function sendChatQuery(query) {
     const response = await fetch(`${API_BASE}/api/chat`, {
