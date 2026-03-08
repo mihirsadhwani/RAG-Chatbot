@@ -64,7 +64,7 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
 
     return (
         <div className="flex flex-col h-full bg-surface">
-            <div className="px-6 pt-4 pb-2 z-10 sticky top-0 bg-surface/90 backdrop-blur-md">
+            <div className="px-4 sm:px-6 pt-3 sm:pt-4 pb-2 z-10 sticky top-0 bg-surface/90 backdrop-blur-md">
                 <QueryDropdown onQueryGenerated={(q) => handleSend(q)} />
             </div>
 
@@ -121,23 +121,23 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
                 <div ref={messagesEndRef} className="h-4 shrink-0" />
             </div>
 
-            <div className="px-6 py-5 border-t border-border bg-card/50 backdrop-blur-xl shrink-0">
-                <div className="flex items-center gap-3 max-w-4xl mx-auto">
+            <div className="p-3 sm:px-6 sm:py-5 border-t border-border bg-card/50 backdrop-blur-xl shrink-0">
+                <div className="flex items-center gap-2 sm:gap-3 max-w-4xl mx-auto">
                     <input
                         type="text"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
-                        placeholder="Ask about NAV, Expense Ratio, Returns..."
+                        placeholder="Ask about NAV, Expense Ratio etc..."
                         disabled={loading}
-                        className="flex-1 px-5 py-4 bg-surface border border-border shadow-inner rounded-2xl text-[15px] focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all placeholder:text-text-secondary/60 disabled:opacity-60"
+                        className="flex-1 px-4 py-3 sm:px-5 sm:py-4 bg-surface border border-border shadow-inner rounded-xl sm:rounded-2xl text-[14px] sm:text-[15px] focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all placeholder:text-text-secondary/60 disabled:opacity-60"
                     />
                     <button
                         onClick={() => handleSend(input)}
                         disabled={loading || !input.trim()}
-                        className="px-6 py-4 bg-primary text-white rounded-2xl text-[15px] font-semibold hover:bg-primary-dark disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer flex items-center gap-2"
+                        className="px-4 py-3 sm:px-6 sm:py-4 bg-primary text-white rounded-xl sm:rounded-2xl text-[15px] font-semibold hover:bg-primary-dark disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-md hover:shadow-lg cursor-pointer flex items-center gap-2"
                     >
-                        <span>Send</span>
+                        <span className="hidden sm:inline">Send</span>
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

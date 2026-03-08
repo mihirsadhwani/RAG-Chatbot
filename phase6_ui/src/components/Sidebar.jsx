@@ -44,7 +44,7 @@ export default function Sidebar({ activeSection, onSectionChange, isCollapsed, o
             </nav>
 
             {/* Footer / Toggle */}
-            <div className="p-3 border-t border-white/5 shrink-0">
+            <div className="hidden lg:block p-3 border-t border-white/5 shrink-0">
                 <button
                     onClick={onToggleCollapse}
                     className="w-full flex items-center justify-center py-2.5 rounded-lg text-sidebar-text hover:bg-sidebar-hover hover:text-white transition-colors cursor-pointer border border-transparent hover:border-white/10"

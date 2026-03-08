@@ -36,9 +36,9 @@ export default function QueryDropdown({ onQueryGenerated }) {
         <div className="bg-card rounded-2xl border border-border p-4 mb-4 shadow-sm">
             <p className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-3">Select a mutual fund fact</p>
 
-            <div className="flex gap-2 items-end">
+            <div className="flex flex-col sm:flex-row gap-2 sm:items-end">
                 {/* Attribute dropdown */}
-                <div className="flex-1">
+                <div className="flex-1 w-full sm:w-auto">
                     <select
                         value={selectedAttr}
                         onChange={(e) => setSelectedAttr(e.target.value)}
@@ -52,7 +52,7 @@ export default function QueryDropdown({ onQueryGenerated }) {
                 </div>
 
                 {/* Fund dropdown */}
-                <div className="flex-1">
+                <div className="flex-1 w-full sm:w-auto">
                     <select
                         value={selectedFund}
                         onChange={(e) => setSelectedFund(e.target.value)}
@@ -69,7 +69,7 @@ export default function QueryDropdown({ onQueryGenerated }) {
                 <button
                     onClick={handleGenerate}
                     disabled={!selectedAttr || !selectedFund}
-                    className="px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-medium hover:bg-primary-dark disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
+                    className="w-full sm:w-auto px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-medium hover:bg-primary-dark disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
                 >
                     Ask →
                 </button>

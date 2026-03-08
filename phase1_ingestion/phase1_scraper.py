@@ -416,9 +416,20 @@ class Phase1Scraper:
             }
         """, {})
 
+        # === FUND MANAGERS ===
+        fund_managers = await self.safe_evaluate(page, """
+            () => {
+                const els = document.querySelectorAll('[class*="fundManagement_personName"]');
+                const mgrs = [];
+                els.forEach(el => mgrs.push(el.textContent.trim()));
+                return mgrs.length > 0 ? mgrs.join(', ') : '';
+            }
+        """)
+
         return {
             "fund_name": fund_name,
             "source_url": url,
+            "fund_managers": fund_managers,
             "fund_category": fund_category,
             "fund_sub_category": fund_sub_category,
             "risk_level": risk_level,

@@ -12,11 +12,12 @@ def cosine_similarity(v1, v2):
 class Retriever:
     def __init__(self):
         # User requested path for vector database
-        self.vector_db_path = "../phase3_embeddings/output/chroma_db"
+        base_dir = os.path.dirname(__file__)
+        self.vector_db_path = os.path.join(base_dir, "..", "phase3_embeddings", "output", "chroma_db")
         self.abs_db_path = os.path.abspath(self.vector_db_path)
         
         # Internal reference to embeddings.json for fallback or metadata extraction
-        self.embeddings_path = os.path.abspath("../phase3_embeddings/output/embeddings.json")
+        self.embeddings_path = os.path.abspath(os.path.join(base_dir, "..", "phase3_embeddings", "output", "embeddings.json"))
             
         api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
         if not api_key:
@@ -37,11 +38,9 @@ class Retriever:
             self.client = chromadb.PersistentClient(path=self.abs_db_path)
             # Try to get the collection
             try:
-                self.collection = self.client.get_collection("mutual_fund_knowledge")
-                # Run a dummy query to check if native binaries (hnswlib) crash on this system
-                self.collection.count()
-                self.use_chroma = True
-                print(f"Retriever initialized with ChromaDB at {self.vector_db_path}")
+                # Bypass chroma DB execution entirely natively to prevent crash on Windows
+                self.use_chroma = False
+                print(f"Bypassed ChromaDB due to known MSVCP140.dll native C++ crash error. Native client initialized at {self.vector_db_path}")
             except Exception as e_coll:
                 print(f"Collection 'mutual_fund_knowledge' not found or empty: {e_coll}")
                 self.use_chroma = False

@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+chromadb
+google-generativeai
+python-dotenv
+playwright
+numpy
+pandas
+requests
+apscheduler
+pydantic

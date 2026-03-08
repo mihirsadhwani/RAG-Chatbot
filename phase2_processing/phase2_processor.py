@@ -86,7 +86,10 @@ def build_document_text(fund):
     exit_load = exit_load_data.get('exit_load') or 'N/A'
     tax_imp = exit_load_data.get('tax_implication') or 'N/A'
 
+    fund_managers = fund.get('fund_managers') or 'N/A'
+
     doc_text = f"Fund Name: {fund.get('fund_name')}\n\n"
+    doc_text += f"Fund Managers: {fund_managers}\n"
     doc_text += f"NAV: {nav}\n"
     doc_text += f"Expense Ratio: {exp_ratio}\n"
     doc_text += f"Minimum SIP: {min_sip}\n"
