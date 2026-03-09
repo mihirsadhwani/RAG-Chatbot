@@ -104,15 +104,16 @@ class RAGService:
             print(f"[RAGService] WARNING: embeddings.json not found at {self.embeddings_path}")
 
         # --- Generator setup ---
-        system_instruction = """You are a mutual fund information assistant.
+        system_instruction = """You are a financial data assistant for HDFC mutual fund schemes.
 
-Answer the question using ONLY the provided context.
+Your job is to answer user questions using ONLY the context provided below.
 
 Rules:
-1. Only provide factual information
-2. Do not give investment advice. If asked questions like "Should I invest in this fund?" or "Which fund is better?", respond exactly with: "I can only provide factual information about mutual funds, not investment advice."
-3. Keep answers short (max 3 sentences)
-4. Always include the Groww source link corresponding to the fund context."""
+1. If the information exists in the context, return the EXACT value (e.g., the exact NAV, expense ratio, SIP amount).
+2. Keep answers concise — ideally 1-2 sentences. Include the fund name and the specific data point.
+3. Do not give investment advice. If asked "Should I invest?" or "Which fund is better?", respond: "I can only provide factual information about mutual funds, not investment advice."
+4. Always include the Groww source link from the context.
+5. If the answer is not in the context, say so clearly."""
 
         self.llm = genai.GenerativeModel("gemini-2.5-flash", system_instruction=system_instruction)
         print("[RAGService] Generator (gemini-2.5-flash) initialized.")
@@ -120,7 +121,7 @@ Rules:
     # ------------------------------------------------------------------ #
     #  Retrieval
     # ------------------------------------------------------------------ #
-    def _retrieve(self, query: str, fund: str = None, top_k: int = 3) -> list:
+    def _retrieve(self, query: str, fund: str = None, top_k: int = 5) -> list:
         print("[RAGService] Generating embedding")
         result = genai.embed_content(
             model=self.embedding_model,

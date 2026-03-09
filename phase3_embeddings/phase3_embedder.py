@@ -1,5 +1,6 @@
 import os
 import json
+import time
 import google.generativeai as genai
 from dotenv import load_dotenv, find_dotenv
 
@@ -24,17 +25,42 @@ def generate_embeddings():
         for line in f:
             if line.strip():
                 chunks.append(json.loads(line))
-                
+
+    # Load any previously saved embeddings to allow resuming
     embeddings_data = []
+    done_ids = set()
+    if os.path.exists(output_file):
+        with open(output_file, 'r', encoding='utf-8') as f:
+            embeddings_data = json.load(f)
+            done_ids = {row["chunk_id"] for row in embeddings_data}
+        print(f"[Resume] Found {len(done_ids)} already-embedded chunks. Continuing...")
+
     for i, chunk in enumerate(chunks):
-        print(f"Embedding chunk {i+1}/{len(chunks)}")
+        if chunk["chunk_id"] in done_ids:
+            continue
+
+        print(f"Embedding chunk {i+1}/{len(chunks)} - {chunk['fund_name'][:30]}...")
         
-        result = genai.embed_content(
-            model=model,
-            content=chunk["text"],
-            task_type="retrieval_document",
-            title=chunk["fund_name"]
-        )
+        max_retries = 5
+        for attempt in range(max_retries):
+            try:
+                result = genai.embed_content(
+                    model=model,
+                    content=chunk["text"],
+                    task_type="retrieval_document",
+                    title=chunk["fund_name"]
+                )
+                break
+            except Exception as e:
+                if "429" in str(e) or "ResourceExhausted" in str(e):
+                    wait = 60 * (attempt + 1)
+                    print(f"  Rate limited. Waiting {wait}s before retry {attempt+1}/{max_retries}...")
+                    time.sleep(wait)
+                else:
+                    raise
+        else:
+            print(f"  FAILED after {max_retries} retries, skipping chunk {chunk['chunk_id']}")
+            continue
         
         embedding = result['embedding']
         
@@ -47,9 +73,22 @@ def generate_embeddings():
             "embedding": embedding
         }
         embeddings_data.append(row)
-        
+
+        # Save after every 20 chunks to avoid losing progress
+        if len(embeddings_data) % 20 == 0:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(embeddings_data, f, ensure_ascii=False, indent=2)
+            print(f"  [Checkpoint] Saved {len(embeddings_data)} embeddings")
+
+        # Rate-limit: ~1 request per second to stay within 100/min
+        time.sleep(1.0)
+
+    # Final save
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(embeddings_data, f, ensure_ascii=False, indent=2)
 
+    print(f"Done! Total embeddings: {len(embeddings_data)}")
+
 if __name__ == "__main__":
     generate_embeddings()
+
