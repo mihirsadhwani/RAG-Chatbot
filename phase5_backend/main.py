@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .api_routes import router as chat_router
-from .health_check import router as health_router
+from phase5_backend.api_routes import router as chat_router
+from phase5_backend.health_check import router as health_router
 
 app = FastAPI(
     title="Mutual Fund RAG Chatbot API",
