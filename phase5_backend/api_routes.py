@@ -13,7 +13,8 @@ rag_service = RAGService()
 @router.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     query = request.query.strip()
-    print(f"[API] Query received: {query}")
+    fund = request.fund.strip() if request.fund else None
+    print(f"[API] Query received: {query}" + (f" | Fund: {fund}" if fund else ""))
 
     # Step 1: Validate with guardrails
     validation = validate_query(query)
@@ -27,7 +28,7 @@ async def chat(request: ChatRequest):
 
     # Step 2: Run RAG pipeline
     try:
-        result = rag_service.ask(query)
+        result = rag_service.ask(query, fund=fund)
     except Exception as e:
         print(f"[API] RAG pipeline error: {e}")
         return ChatResponse(

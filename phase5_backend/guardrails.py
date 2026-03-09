@@ -1,30 +1,31 @@
 import re
 
-# Funds in the knowledge base
+# Funds in the knowledge base (exact scraped scheme names)
 KNOWN_FUNDS = [
-    "HDFC Balanced Advantage Fund",
-    "HDFC Flexi Cap Fund",
-    "HDFC Mid-Cap Opportunities Fund",
-    "HDFC Top 100 Fund",
-    "HDFC Small Cap Fund",
+    "HDFC Balanced Advantage Fund Direct Growth",
+    "HDFC Flexi Cap Direct Plan Growth",
+    "HDFC Mid Cap Fund Direct Growth",
+    "HDFC Large Cap Fund Direct Growth",
+    "HDFC Small Cap Fund Direct Growth",
 ]
 
 # Alternate names / aliases that map to the known funds
 FUND_ALIASES = {
-    "hdfc balanced advantage": "HDFC Balanced Advantage Fund",
-    "hdfc flexi cap": "HDFC Flexi Cap Fund",
-    "hdfc flexicap": "HDFC Flexi Cap Fund",
-    "hdfc mid cap": "HDFC Mid-Cap Opportunities Fund",
-    "hdfc mid-cap": "HDFC Mid-Cap Opportunities Fund",
-    "hdfc midcap": "HDFC Mid-Cap Opportunities Fund",
-    "hdfc large cap": "HDFC Top 100 Fund",
-    "hdfc top 100": "HDFC Top 100 Fund",
-    "hdfc large-cap": "HDFC Top 100 Fund",
-    "hdfc largecap": "HDFC Top 100 Fund",
-    "hdfc small cap": "HDFC Small Cap Fund",
-    "hdfc smallcap": "HDFC Small Cap Fund",
-    "hdfc small-cap": "HDFC Small Cap Fund",
-    "hdfc equity": "HDFC Flexi Cap Fund",
+    "hdfc balanced advantage": "HDFC Balanced Advantage Fund Direct Growth",
+    "hdfc balanced": "HDFC Balanced Advantage Fund Direct Growth",
+    "hdfc flexi cap": "HDFC Flexi Cap Direct Plan Growth",
+    "hdfc flexicap": "HDFC Flexi Cap Direct Plan Growth",
+    "hdfc mid cap": "HDFC Mid Cap Fund Direct Growth",
+    "hdfc mid-cap": "HDFC Mid Cap Fund Direct Growth",
+    "hdfc midcap": "HDFC Mid Cap Fund Direct Growth",
+    "hdfc large cap": "HDFC Large Cap Fund Direct Growth",
+    "hdfc top 100": "HDFC Large Cap Fund Direct Growth",
+    "hdfc large-cap": "HDFC Large Cap Fund Direct Growth",
+    "hdfc largecap": "HDFC Large Cap Fund Direct Growth",
+    "hdfc small cap": "HDFC Small Cap Fund Direct Growth",
+    "hdfc smallcap": "HDFC Small Cap Fund Direct Growth",
+    "hdfc small-cap": "HDFC Small Cap Fund Direct Growth",
+    "hdfc equity": "HDFC Flexi Cap Direct Plan Growth",
 }
 
 # Topics we can answer about
@@ -56,8 +57,8 @@ UNKNOWN_FUND_RESPONSE = """I currently have information only about the following
 
 - HDFC Balanced Advantage Fund
 - HDFC Flexi Cap Fund
-- HDFC Mid-Cap Opportunities Fund
-- HDFC Top 100 Fund
+- HDFC Mid Cap Fund
+- HDFC Large Cap Fund
 - HDFC Small Cap Fund"""
 
 

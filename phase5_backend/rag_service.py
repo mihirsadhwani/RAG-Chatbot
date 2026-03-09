@@ -12,6 +12,66 @@ def cosine_similarity(v1, v2):
     return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 
+# ---------------------------------------------------------------------------
+#  Fund keyword normalization (mirrors the frontend constants/funds.js)
+# ---------------------------------------------------------------------------
+FUND_KEYWORDS = {
+    "large cap": "HDFC Large Cap Fund Direct Growth",
+    "largecap": "HDFC Large Cap Fund Direct Growth",
+    "top 100": "HDFC Large Cap Fund Direct Growth",
+    "small cap": "HDFC Small Cap Fund Direct Growth",
+    "smallcap": "HDFC Small Cap Fund Direct Growth",
+    "flexi cap": "HDFC Flexi Cap Direct Plan Growth",
+    "flexicap": "HDFC Flexi Cap Direct Plan Growth",
+    "mid cap": "HDFC Mid Cap Fund Direct Growth",
+    "midcap": "HDFC Mid Cap Fund Direct Growth",
+    "mid-cap": "HDFC Mid Cap Fund Direct Growth",
+    "balanced advantage": "HDFC Balanced Advantage Fund Direct Growth",
+    "balanced": "HDFC Balanced Advantage Fund Direct Growth",
+}
+
+# Sort by key length descending so longer matches are tried first
+_SORTED_KEYWORDS = sorted(FUND_KEYWORDS.keys(), key=len, reverse=True)
+
+
+def normalize_query(query: str) -> str:
+    """Replace casual fund keywords in the query with exact scheme names."""
+    q_lower = query.lower()
+    for kw in _SORTED_KEYWORDS:
+        if kw in q_lower:
+            import re
+            query = re.sub(re.escape(kw), FUND_KEYWORDS[kw], query, flags=re.IGNORECASE)
+            break
+    return query
+
+
+def detect_fund_in_query(query: str) -> str | None:
+    """Try to detect which specific fund is referenced in the query."""
+    q_lower = query.lower()
+    # Check exact scheme names first
+    schemes = [
+        "HDFC Balanced Advantage Fund Direct Growth",
+        "HDFC Flexi Cap Direct Plan Growth",
+        "HDFC Mid Cap Fund Direct Growth",
+        "HDFC Large Cap Fund Direct Growth",
+        "HDFC Small Cap Fund Direct Growth",
+    ]
+    for scheme in schemes:
+        if scheme.lower() in q_lower:
+            return scheme
+    # Check keywords
+    for kw in _SORTED_KEYWORDS:
+        if kw in q_lower:
+            return FUND_KEYWORDS[kw]
+    return None
+
+
+NO_INFO_RESPONSE = (
+    "I couldn't find that information in the knowledge base yet. "
+    "Try asking about NAV, SIP amount, expense ratio, holdings, or sector allocation."
+)
+
+
 class RAGService:
     """
     Wraps the Phase-4 retrieval + generation pipeline for use by the backend API.
@@ -60,7 +120,7 @@ Rules:
     # ------------------------------------------------------------------ #
     #  Retrieval
     # ------------------------------------------------------------------ #
-    def _retrieve(self, query: str, top_k: int = 3) -> list:
+    def _retrieve(self, query: str, fund: str = None, top_k: int = 3) -> list:
         print("[RAGService] Generating embedding")
         result = genai.embed_content(
             model=self.embedding_model,
@@ -69,9 +129,17 @@ Rules:
         )
         query_vector = np.array(result["embedding"])
 
+        # Optionally filter by fund name
+        search_data = self.store_data
+        if fund:
+            filtered = [row for row in self.store_data if row["fund_name"].lower() == fund.lower()]
+            if filtered:
+                search_data = filtered
+                print(f"[RAGService] Filtered to {len(filtered)} chunks for fund: {fund}")
+
         print("[RAGService] Searching vector DB")
         scored = []
-        for row in self.store_data:
+        for row in search_data:
             v = np.array(row["embedding"])
             score = cosine_similarity(query_vector, v)
             scored.append((score, row))
@@ -106,23 +174,48 @@ Rules:
         prompt = f"Context:\n{context_str}\n\nUser Question:\n{query}\n\nAnswer:"
 
         response = self.llm.generate_content(prompt)
+        answer = response.text.strip()
+
+        # Replace generic "not available" with a better message
+        not_avail_phrases = [
+            "not available in the provided context",
+            "not found in the provided context",
+            "information is not available",
+            "no information available",
+        ]
+        if any(phrase in answer.lower() for phrase in not_avail_phrases):
+            answer = NO_INFO_RESPONSE
+
         print("[RAGService] Answer generated")
 
         return {
-            "answer": response.text.strip(),
+            "answer": answer,
             "sources": list(unique_sources),
         }
 
     # ------------------------------------------------------------------ #
     #  Public API
     # ------------------------------------------------------------------ #
-    def ask(self, query: str) -> dict:
+    def ask(self, query: str, fund: str = None) -> dict:
         """
         Full RAG pipeline: retrieve relevant chunks then generate an answer.
         Returns {"answer": str, "sources": list[str]}
         """
         print(f"[RAGService] Query received: {query}")
 
-        chunks = self._retrieve(query)
+        # Normalize the query — replace casual keywords with exact scheme names
+        normalized = normalize_query(query)
+        if normalized != query:
+            print(f"[RAGService] Normalized query: {normalized}")
+            query = normalized
+
+        # If no explicit fund passed, try detecting from the query text
+        if not fund:
+            fund = detect_fund_in_query(query)
+            if fund:
+                print(f"[RAGService] Auto-detected fund: {fund}")
+
+        chunks = self._retrieve(query, fund=fund)
         result = self._generate(chunks, query)
         return result
+

@@ -1,7 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import SourceCard from './SourceCard';
 import QueryDropdown from './QueryDropdown';
 import { sendChatQuery } from '../services/api';
+import { normalizeQuery } from '../constants/funds';
 
 export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery, onClearTrigger }) {
     const [messages, setMessages] = useState([
@@ -15,6 +16,8 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
     const messagesEndRef = useRef(null);
+    const lastQueryRef = useRef('');        // prevent duplicate calls
+    const responseCacheRef = useRef({});     // cache recent responses
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -28,17 +31,37 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
         }
     }, [triggerQuery]);
 
-    const handleSend = async (queryParam) => {
-        const q = (typeof queryParam === 'string' ? queryParam : input).trim();
-        if (!q || loading) return;
+    const handleSend = useCallback(async (queryParam) => {
+        const rawQuery = (typeof queryParam === 'string' ? queryParam : input).trim();
+        if (!rawQuery || loading) return;
 
-        setMessages((prev) => [...prev, { id: Date.now(), role: 'user', text: q, sources: [] }]);
+        // Normalize casual fund keywords → exact scheme names
+        const q = normalizeQuery(rawQuery);
+
+        // Prevent duplicate back-to-back identical calls
+        if (q === lastQueryRef.current && responseCacheRef.current[q]) {
+            const cached = responseCacheRef.current[q];
+            setMessages((prev) => [
+                ...prev,
+                { id: Date.now(), role: 'user', text: rawQuery, sources: [] },
+                { id: Date.now() + 1, role: 'assistant', text: cached.answer, sources: cached.sources || [], originalQuery: rawQuery },
+            ]);
+            if (onResultReceived) onResultReceived(cached);
+            setInput('');
+            return;
+        }
+
+        lastQueryRef.current = q;
+        setMessages((prev) => [...prev, { id: Date.now(), role: 'user', text: rawQuery, sources: [] }]);
         setInput('');
         setLoading(true);
 
         try {
             const data = await sendChatQuery(q);
-            const botMsg = { id: Date.now() + 1, role: 'assistant', text: data.answer, sources: data.sources || [], originalQuery: q };
+            // Cache the response
+            responseCacheRef.current[q] = data;
+
+            const botMsg = { id: Date.now() + 1, role: 'assistant', text: data.answer, sources: data.sources || [], originalQuery: rawQuery };
             setMessages((prev) => [...prev, botMsg]);
             if (onResultReceived) onResultReceived(data);
         } catch (err) {
@@ -49,7 +72,7 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
         } finally {
             setLoading(false);
         }
-    };
+    }, [input, loading, onResultReceived]);
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
@@ -147,3 +170,4 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
         </div>
     );
 }
+

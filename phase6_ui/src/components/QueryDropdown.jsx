@@ -1,12 +1,5 @@
 import { useState } from 'react';
-
-const FUNDS = [
-    'HDFC Balanced Advantage Fund',
-    'HDFC Flexi Cap Fund',
-    'HDFC Mid-Cap Opportunities Fund',
-    'HDFC Top 100 Fund',
-    'HDFC Small Cap Fund',
-];
+import { FUNDS } from '../constants/funds';
 
 const ATTRIBUTES = [
     'Expense Ratio',
@@ -22,14 +15,16 @@ const ATTRIBUTES = [
 
 export default function QueryDropdown({ onQueryGenerated }) {
     const [selectedAttr, setSelectedAttr] = useState('');
-    const [selectedFund, setSelectedFund] = useState('');
+    const [selectedFundIdx, setSelectedFundIdx] = useState('');
 
     const handleGenerate = () => {
-        if (!selectedAttr || !selectedFund) return;
-        const query = `What is the ${selectedAttr.toLowerCase()} of ${selectedFund}?`;
+        if (!selectedAttr || selectedFundIdx === '') return;
+        const fund = FUNDS[Number(selectedFundIdx)];
+        // Use the exact scheme name so the backend retriever can match it
+        const query = `What is the ${selectedAttr.toLowerCase()} of ${fund.scheme}?`;
         onQueryGenerated(query);
         setSelectedAttr('');
-        setSelectedFund('');
+        setSelectedFundIdx('');
     };
 
     return (
@@ -54,13 +49,13 @@ export default function QueryDropdown({ onQueryGenerated }) {
                 {/* Fund dropdown */}
                 <div className="flex-1 w-full sm:w-auto">
                     <select
-                        value={selectedFund}
-                        onChange={(e) => setSelectedFund(e.target.value)}
+                        value={selectedFundIdx}
+                        onChange={(e) => setSelectedFundIdx(e.target.value)}
                         className="w-full px-3 py-2.5 rounded-xl border border-border bg-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all appearance-none cursor-pointer"
                     >
                         <option value="">Choose fund...</option>
-                        {FUNDS.map((f) => (
-                            <option key={f} value={f}>{f}</option>
+                        {FUNDS.map((f, i) => (
+                            <option key={f.slug} value={i}>{f.name}</option>
                         ))}
                     </select>
                 </div>
@@ -68,7 +63,7 @@ export default function QueryDropdown({ onQueryGenerated }) {
                 {/* Generate button */}
                 <button
                     onClick={handleGenerate}
-                    disabled={!selectedAttr || !selectedFund}
+                    disabled={!selectedAttr || selectedFundIdx === ''}
                     className="w-full sm:w-auto px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-medium hover:bg-primary-dark disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
                 >
                     Ask →
@@ -77,3 +72,4 @@ export default function QueryDropdown({ onQueryGenerated }) {
         </div>
     );
 }
+

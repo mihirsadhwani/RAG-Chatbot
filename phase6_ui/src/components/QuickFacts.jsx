@@ -4,30 +4,30 @@ export default function QuickFacts({ onQuerySelect }) {
             title: "Cost & Expense Ratings",
             icon: "💸",
             queries: [
-                "Expense ratio of HDFC Flexi Cap Fund",
-                "Expense ratio of HDFC Small Cap Fund",
-                "Exit load of HDFC Top 100 Fund",
-                "Stamp duty for HDFC Balanced Advantage Fund"
+                "Expense ratio of HDFC Flexi Cap Direct Plan Growth",
+                "Expense ratio of HDFC Small Cap Fund Direct Growth",
+                "Exit load of HDFC Large Cap Fund Direct Growth",
+                "Stamp duty for HDFC Balanced Advantage Fund Direct Growth"
             ]
         },
         {
             title: "Investment Needs",
             icon: "📈",
             queries: [
-                "Minimum SIP requirement for HDFC Mid-Cap Opportunities Fund",
-                "Minimum Lumpsum of HDFC Small Cap Fund",
-                "Minimum SIP of HDFC Flexi Cap Fund",
-                "Tax implications for HDFC Balanced Advantage Fund"
+                "Minimum SIP requirement for HDFC Mid Cap Fund Direct Growth",
+                "Minimum Lumpsum of HDFC Small Cap Fund Direct Growth",
+                "Minimum SIP of HDFC Flexi Cap Direct Plan Growth",
+                "Tax implications for HDFC Balanced Advantage Fund Direct Growth"
             ]
         },
         {
             title: "Performance & Structure",
             icon: "📊",
             queries: [
-                "What is the benchmark of HDFC Top 100 Fund?",
-                "Fund size of HDFC Mid-Cap Opportunities Fund",
-                "Current NAV of HDFC Flexi Cap Fund",
-                "Risk level of HDFC Small Cap Fund"
+                "What is the benchmark of HDFC Large Cap Fund Direct Growth?",
+                "Fund size of HDFC Mid Cap Fund Direct Growth",
+                "Current NAV of HDFC Flexi Cap Direct Plan Growth",
+                "Risk level of HDFC Small Cap Fund Direct Growth"
             ]
         }
     ];
