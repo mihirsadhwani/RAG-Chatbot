@@ -9,15 +9,15 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
         {
             id: 1,
             role: 'assistant',
-            text: 'Hello! I\'m your HDFC Mutual Fund assistant. Ask me about expense ratios, NAV, SIP amounts, returns, holdings, or any other factual information about HDFC fund schemes.',
+            text: "Hello! I'm your HDFC Mutual Fund assistant. Ask me about expense ratios, NAV, SIP amounts, returns, holdings, or any other factual information about HDFC fund schemes.",
             sources: [],
         },
     ]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
     const messagesEndRef = useRef(null);
-    const lastQueryRef = useRef('');        // prevent duplicate calls
-    const responseCacheRef = useRef({});     // cache recent responses
+    const lastQueryRef = useRef('');
+    const responseCacheRef = useRef({});
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -35,10 +35,8 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
         const rawQuery = (typeof queryParam === 'string' ? queryParam : input).trim();
         if (!rawQuery || loading) return;
 
-        // Normalize casual fund keywords → exact scheme names
         const q = normalizeQuery(rawQuery);
 
-        // Prevent duplicate back-to-back identical calls
         if (q === lastQueryRef.current && responseCacheRef.current[q]) {
             const cached = responseCacheRef.current[q];
             setMessages((prev) => [
@@ -58,16 +56,25 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
 
         try {
             const data = await sendChatQuery(q);
-            // Cache the response
             responseCacheRef.current[q] = data;
-
-            const botMsg = { id: Date.now() + 1, role: 'assistant', text: data.answer, sources: data.sources || [], originalQuery: rawQuery };
+            const botMsg = {
+                id: Date.now() + 1,
+                role: 'assistant',
+                text: data.answer,
+                sources: data.sources || [],
+                originalQuery: rawQuery,
+            };
             setMessages((prev) => [...prev, botMsg]);
             if (onResultReceived) onResultReceived(data);
         } catch (err) {
             setMessages((prev) => [
                 ...prev,
-                { id: Date.now() + 1, role: 'assistant', text: 'Sorry, an error occurred communicating with the backend API.', sources: [] },
+                {
+                    id: Date.now() + 1,
+                    role: 'assistant',
+                    text: 'Sorry, an error occurred communicating with the backend API.',
+                    sources: [],
+                },
             ]);
         } finally {
             setLoading(false);
@@ -86,17 +93,26 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
     };
 
     return (
-        <div className="flex flex-col h-full bg-surface">
-            <div className="px-4 sm:px-6 pt-3 sm:pt-4 pb-2 z-10 sticky top-0 bg-surface/90 backdrop-blur-md">
+        /* Outer wrapper: full viewport height, flex column, no overflow */
+        <div
+            style={{ display: 'flex', flexDirection: 'column', height: '100dvh', overflow: 'hidden' }}
+            className="bg-surface"
+        >
+            {/* ── TOP: always-visible dropdown controls ── */}
+            <div className="shrink-0 px-4 sm:px-6 pt-3 sm:pt-4 pb-2 z-20 bg-surface/95 backdrop-blur-md border-b border-border">
                 <QueryDropdown onQueryGenerated={(q) => handleSend(q)} />
             </div>
 
-            <div className="flex-1 overflow-y-auto px-6 py-4 space-y-6 flex flex-col scroll-smooth">
+            {/* ── MIDDLE: independently scrollable message list ── */}
+            <div
+                style={{ flex: 1, overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}
+                className="px-4 sm:px-6 py-4 space-y-6 flex flex-col scroll-smooth"
+            >
                 {messages.map((msg) => (
                     <div key={msg.id} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                         <div
                             className={`max-w-[85%] rounded-[20px] px-5 py-4 text-[15px] leading-relaxed shadow-sm transition-all
-                ${msg.role === 'user'
+                                ${msg.role === 'user'
                                     ? 'bg-primary text-white rounded-br-[5px]'
                                     : 'bg-card border border-border text-text rounded-bl-[5px] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]'
                                 }`}
@@ -104,7 +120,6 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
                             <p className="whitespace-pre-wrap">{msg.text}</p>
                             {msg.role === 'assistant' && <SourceCard sources={msg.sources} />}
 
-                            {/* Actions for Assistant */}
                             {msg.role === 'assistant' && msg.id !== 1 && (
                                 <div className="flex gap-2 mt-4 pt-3 border-t border-border/50">
                                     <button
@@ -141,10 +156,12 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
                     </div>
                 )}
 
+                {/* Scroll anchor */}
                 <div ref={messagesEndRef} className="h-4 shrink-0" />
             </div>
 
-            <div className="p-3 sm:px-6 sm:py-5 border-t border-border bg-card/50 backdrop-blur-xl shrink-0">
+            {/* ── BOTTOM: pinned input bar ── */}
+            <div className="shrink-0 p-3 sm:px-6 sm:py-5 border-t border-border bg-card/50 backdrop-blur-xl">
                 <div className="flex items-center gap-2 sm:gap-3 max-w-4xl mx-auto">
                     <input
                         type="text"
@@ -170,4 +187,3 @@ export default function ChatPanel({ onResultReceived, onSaveQuery, triggerQuery,
         </div>
     );
 }
-
