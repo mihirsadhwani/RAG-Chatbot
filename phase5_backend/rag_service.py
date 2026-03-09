@@ -2,6 +2,7 @@ import os
 import json
 import numpy as np
 import google.generativeai as genai
+from groq import Groq
 from dotenv import load_dotenv, find_dotenv
 
 # Load .env from project root
@@ -104,19 +105,13 @@ class RAGService:
             print(f"[RAGService] WARNING: embeddings.json not found at {self.embeddings_path}")
 
         # --- Generator setup ---
-        system_instruction = """You are a financial data assistant for HDFC mutual fund schemes.
-
-Your job is to answer user questions using ONLY the context provided below.
-
-Rules:
-1. If the information exists in the context, return the EXACT value (e.g., the exact NAV, expense ratio, SIP amount).
-2. Keep answers concise — ideally 1-2 sentences. Include the fund name and the specific data point.
-3. Do not give investment advice. If asked "Should I invest?" or "Which fund is better?", respond: "I can only provide factual information about mutual funds, not investment advice."
-4. Always include the Groww source link from the context.
-5. If the answer is not in the context, say so clearly."""
-
-        self.llm = genai.GenerativeModel("gemini-2.5-flash", system_instruction=system_instruction)
-        print("[RAGService] Generator (gemini-2.5-flash) initialized.")
+        groq_api_key = os.getenv("GROQ_API_KEY")
+        if not groq_api_key:
+            raise ValueError("GROQ_API_KEY is not set.")
+        self.client = Groq(api_key=groq_api_key)
+        
+        self.system_instruction = """You are a helpful mutual fund assistant. Answer only using the provided context."""
+        print("[RAGService] Generator (Groq llama3-8b-8192) initialized.")
 
     # ------------------------------------------------------------------ #
     #  Retrieval
@@ -162,7 +157,7 @@ Rules:
     #  Generation
     # ------------------------------------------------------------------ #
     def _generate(self, chunks: list, query: str) -> dict:
-        print("[RAGService] Sending prompt to Gemini")
+        print("[RAGService] Sending prompt to Groq")
         context_parts = []
         unique_sources = set()
         for chunk in chunks:
@@ -174,8 +169,22 @@ Rules:
         context_str = "\n\n---\n\n".join(context_parts)
         prompt = f"Context:\n{context_str}\n\nUser Question:\n{query}\n\nAnswer:"
 
-        response = self.llm.generate_content(prompt)
-        answer = response.text.strip()
+        try:
+            response = self.client.chat.completions.create(
+                model="llama3-8b-8192",
+                messages=[
+                    {"role": "system", "content": self.system_instruction},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.2
+            )
+            answer = response.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"[RAGService] Groq generation error: {e}")
+            return {
+                "answer": "Sorry, an error occurred while processing your question.",
+                "sources": []
+            }
 
         # Replace generic "not available" with a better message
         not_avail_phrases = [
