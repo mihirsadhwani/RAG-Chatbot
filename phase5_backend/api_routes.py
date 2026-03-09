@@ -14,7 +14,7 @@ rag_service = RAGService()
 async def chat(request: ChatRequest):
     query = request.query.strip()
     fund = request.fund.strip() if request.fund else None
-    print(f"[API] Query received: {query}" + (f" | Fund: {fund}" if fund else ""))
+    print(f"[API] chat endpoint called: query='{query}', fund='{fund}'")
 
     # Step 1: Validate with guardrails
     validation = validate_query(query)

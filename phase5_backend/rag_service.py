@@ -110,19 +110,27 @@ class RAGService:
             raise ValueError("GROQ_API_KEY is not set.")
         self.client = Groq(api_key=groq_api_key)
         
-        self.system_instruction = """You are a helpful mutual fund assistant. Answer only using the provided context."""
-        print("[RAGService] Generator (Groq llama3-8b-8192) initialized.")
+        self.system_instruction = """You are a financial data assistant for HDFC mutual fund schemes.
+Answer user questions using ONLY the context provided below.
+
+Rules:
+1. Return EXACT values (NAV, expense ratio, SIP, etc.) found in the context.
+2. Keep answers concise — 1-2 sentences.
+3. No investment advice.
+4. Always include the Groww source link from the context."""
+        print("[RAGService] Generator (Groq llama-3.3-70b-versatile) initialized.")
 
     # ------------------------------------------------------------------ #
     #  Retrieval
     # ------------------------------------------------------------------ #
     def _retrieve(self, query: str, fund: str = None, top_k: int = 5) -> list:
-        print("[RAGService] Generating embedding")
+        print(f"[RAGService] Generating embedding for query: {query[:50]}...")
         result = genai.embed_content(
             model=self.embedding_model,
             content=query,
             task_type="retrieval_query",
         )
+        print("[RAGService] Embedding generated successfully.")
         query_vector = np.array(result["embedding"])
 
         # Optionally filter by fund name

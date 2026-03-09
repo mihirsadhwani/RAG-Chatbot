@@ -1,15 +1,16 @@
 const API_BASE = 'https://rag-chatbot-p0d5.onrender.com';
 
-export async function sendChatQuery(query, fund = null) {
-    const body = { query };
-    if (fund) body.fund = fund;
-
+export async function sendChatQuery(query) {
     const response = await fetch(`${API_BASE}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ query: query }),
     });
-    if (!response.ok) throw new Error(`API error: ${response.status}`);
+
+    if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+    }
+
     return response.json();
 }
 
