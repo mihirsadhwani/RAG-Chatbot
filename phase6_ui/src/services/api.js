@@ -1,4 +1,4 @@
-const API_BASE = 'https://rag-chatbot-p0d5.onrender.com';
+const API_BASE = 'http://localhost:10000';
 
 export async function sendChatQuery(query, fund = null) {
     const body = { query };
