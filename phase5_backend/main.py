@@ -12,8 +12,8 @@ from phase5_backend.health_check import router as health_router
 
 app = FastAPI(
     title="Mutual Fund RAG Chatbot API",
-    description="Backend API for the HDFC Mutual Fund RAG Chatbot. "
-                "Provides factual answers about HDFC mutual fund schemes using Retrieval-Augmented Generation.",
+    description="Backend API for the multi-AMC mutual fund RAG assistant. "
+                "Provides source-grounded facts about indexed mutual fund schemes.",
     version="1.0.0",
 )
 

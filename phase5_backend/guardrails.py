@@ -1,70 +1,53 @@
 import re
+from phase5_backend.knowledge_base import detect_funds, load_funds
 
-# Funds in the knowledge base (exact scraped scheme names)
-KNOWN_FUNDS = [
-    "HDFC Balanced Advantage Fund Direct Growth",
-    "HDFC Flexi Cap Direct Plan Growth",
-    "HDFC Mid Cap Fund Direct Growth",
-    "HDFC Large Cap Fund Direct Growth",
-    "HDFC Small Cap Fund Direct Growth",
-]
+SUPPORTED_AMCS = ["hdfc", "icici", "icici prudential", "sbi", "axis", "bandhan", "idfc"]
 
-# Alternate names / aliases that map to the known funds
-FUND_ALIASES = {
-    "hdfc balanced advantage": "HDFC Balanced Advantage Fund Direct Growth",
-    "hdfc balanced": "HDFC Balanced Advantage Fund Direct Growth",
-    "hdfc flexi cap": "HDFC Flexi Cap Direct Plan Growth",
-    "hdfc flexicap": "HDFC Flexi Cap Direct Plan Growth",
-    "hdfc mid cap": "HDFC Mid Cap Fund Direct Growth",
-    "hdfc mid-cap": "HDFC Mid Cap Fund Direct Growth",
-    "hdfc midcap": "HDFC Mid Cap Fund Direct Growth",
-    "hdfc large cap": "HDFC Large Cap Fund Direct Growth",
-    "hdfc top 100": "HDFC Large Cap Fund Direct Growth",
-    "hdfc large-cap": "HDFC Large Cap Fund Direct Growth",
-    "hdfc largecap": "HDFC Large Cap Fund Direct Growth",
-    "hdfc small cap": "HDFC Small Cap Fund Direct Growth",
-    "hdfc smallcap": "HDFC Small Cap Fund Direct Growth",
-    "hdfc small-cap": "HDFC Small Cap Fund Direct Growth",
-    "hdfc equity": "HDFC Flexi Cap Direct Plan Growth",
-}
+FACTUAL_METRIC_WORDS = (
+    r"\b(return|returns|cagr|nav|expense|ratio|aum|size|sip|exit\s+load|"
+    r"rank|ranking|holding|holdings|cash|debt|equity|allocation|performance|"
+    r"1y|3y|5y|10y|1\s*year|3\s*year|5\s*year|10\s*year)\b"
+)
 
-# Topics we can answer about
-SUPPORTED_TOPICS = [
-    "expense ratio", "nav", "minimum sip", "sip", "fund size", "aum",
-    "exit load", "benchmark", "risk", "returns", "return", "holdings",
-    "sector allocation", "sector", "tax", "stamp duty", "fund manager",
-    "allocation", "portfolio", "composition", "performance", "annualised",
-    "historical", "1 year", "3 year", "5 year", "10 year",
-]
-
-# Investment advice patterns to reject
 ADVICE_PATTERNS = [
-    r"\bshould\s+i\s+invest\b",
-    r"\bwhich\s+(fund|scheme|mutual\s+fund)\s+is\s+best\b",
-    r"\bbetter\s+(fund|scheme|investment)\b",
+    r"\bshould\s+i\s+(invest|buy|sell|redeem|switch|start|stop)\b",
+    r"\b(can|could|would)\s+you\s+(recommend|suggest|advise)\b",
     r"\brecommend\b",
     r"\badvice\b",
-    r"\bsuggest\b",
-    r"\bcompare\b.*\b(fund|scheme)\b",
+    r"\badvise\s+me\b",
+    r"\bsuggest\s+(me\s+)?(a|some|which)?\s*(good|best)?\s*(fund|scheme|mutual\s+fund|investment)\b",
+    r"\bwhich\s+(fund|scheme|mutual\s+fund)\s+is\s+(best|better|good|right|suitable|ideal)\b",
+    r"\b(best|good|better)\s+(fund|scheme|investment)\s+(for\s+me|to\s+invest|to\s+buy|for\s+long\s+term|for\s+short\s+term)\b",
     r"\bbuy\s+or\s+sell\b",
-    r"\binvest\s+in\b",
-    r"\bgood\s+(fund|investment|scheme)\b",
+    r"\bworth\s+(investing|buying)\b",
+    r"\bkya\s+(mujhe|main|hum)\s+.*\b(invest|buy|kharid|lagana)\b",
+    r"\bkaunsa\s+(fund|scheme)\s+(lena|kharidna|sahi|best)\s+(chahiye|rahega|hai\s+mere\s+liye)\b",
 ]
 
-ADVICE_RESPONSE = "I can only provide factual information about mutual fund schemes and cannot give investment advice."
+ADVICE_RESPONSE = (
+    "I can only provide factual information about mutual fund schemes and cannot give investment advice."
+)
 
-UNKNOWN_FUND_RESPONSE = """I currently have information only about the following HDFC mutual fund schemes:
-
-- HDFC Balanced Advantage Fund
-- HDFC Flexi Cap Fund
-- HDFC Mid Cap Fund
-- HDFC Large Cap Fund
-- HDFC Small Cap Fund"""
+UNKNOWN_FUND_RESPONSE = (
+    "I currently have information for 26 schemes across 5 AMCs in my knowledge base:\n\n"
+    "- HDFC Mutual Fund (Balanced Advantage, Multi Cap, Flexi Cap, Mid Cap, Large Cap, Small Cap)\n"
+    "- ICICI Prudential Mutual Fund (Small Cap, Mid Cap, Large Cap, Multi Cap, Flexi Cap)\n"
+    "- SBI Mutual Fund (Small Cap, Mid Cap, Large Cap, Multicap, Flexicap)\n"
+    "- Axis Mutual Fund (Small Cap, Midcap, Large Cap, Multicap, Flexi Cap)\n"
+    "- Bandhan Mutual Fund / IDFC (Small Cap, Mid Cap, Large Cap, Multi Cap, Flexi Cap)"
+)
 
 
 def is_investment_advice(query: str) -> bool:
-    """Check if the user is asking for investment advice."""
-    q_lower = query.lower()
+    """Check if the user is asking for subjective investment advice."""
+    q_lower = query.lower().strip()
+
+    if re.search(r"\b(which|kaunsa|konsa)\b.*\b(best|better|good)\b", q_lower) and re.search(
+        FACTUAL_METRIC_WORDS, q_lower
+    ):
+        if not re.search(r"\b(should\s+i|for\s+me|recommend|advise|buy\s+or\s+sell)\b", q_lower):
+            return False
+
     for pattern in ADVICE_PATTERNS:
         if re.search(pattern, q_lower):
             return True
@@ -72,67 +55,64 @@ def is_investment_advice(query: str) -> bool:
 
 
 def mentions_known_fund(query: str) -> bool:
-    """Check if the query mentions a fund we know about."""
+    """Check if the query mentions any supported AMC or scheme in the knowledge base."""
     q_lower = query.lower()
-    # Check direct fund names
-    for fund in KNOWN_FUNDS:
-        if fund.lower() in q_lower:
+    for amc in SUPPORTED_AMCS:
+        if re.search(rf"\b{re.escape(amc)}\b", q_lower):
             return True
-    # Check aliases
-    for alias in FUND_ALIASES:
-        if alias in q_lower:
-            return True
-    # Generic "hdfc" + topic is also valid
-    if "hdfc" in q_lower:
+    if len(detect_funds(query)) > 0:
         return True
+    for fname in load_funds():
+        if fname.lower() in q_lower:
+            return True
     return False
 
 
 def mentions_unknown_fund(query: str) -> bool:
-    """Check if the query mentions a non-HDFC fund explicitly."""
+    """Check if the query asks about an unsupported mutual fund AMC."""
     q_lower = query.lower()
-    # Common non-HDFC AMC names
-    other_amcs = [
-        "sbi", "icici", "axis", "kotak", "nippon", "tata", "dsp",
-        "aditya birla", "franklin", "mirae", "motilal", "uti",
-        "canara", "invesco", "pgim", "edelweiss", "hsbc", "idfc",
-        "sundaram", "bandhan", "quant", "parag parikh", "ppfas",
+
+    holding_context = re.search(
+        r"\b(hold|holds|holding|holdings|stock|stocks|share|shares|company|companies|portfolio|allocation|weight)\b",
+        q_lower,
+    )
+
+    unsupported_amcs = [
+        "aditya birla", "franklin", "mirae", "motilal", "uti", "canara robeco",
+        "invesco", "pgim", "edelweiss", "hsbc", "sundaram", "quant",
+        "parag parikh", "ppfas", "nippon", "dsp",
     ]
-    for amc in other_amcs:
-        if amc in q_lower:
+    for amc in unsupported_amcs:
+        if re.search(rf"\b{re.escape(amc)}\b", q_lower):
             return True
-    return False
 
-
-def mentions_supported_topic(query: str) -> bool:
-    """Check if the query is about a supported factual topic."""
-    q_lower = query.lower()
-    for topic in SUPPORTED_TOPICS:
-        if topic in q_lower:
+    # Names that can be BOTH an unsupported AMC and a stock holding
+    ambiguous_amcs = ["kotak", "tata"]
+    for amc in ambiguous_amcs:
+        if re.search(rf"\b{re.escape(amc)}\b", q_lower):
+            if re.search(rf"\b{re.escape(amc)}\s+(mahindra|bank|life|motors|steel|power|communications|consultancy|consumer|chemicals|elxsi)\b", q_lower):
+                continue
+            if holding_context:
+                continue
             return True
+
     return False
 
 
 def validate_query(query: str) -> dict:
-    """
-    Validate a user query and return a result dict.
-    
-    Returns:
-        {
-            "valid": bool,
-            "rejection_message": str or None
-        }
-    """
+    """Validate a user query and return {'valid': bool, 'rejection_message': str | None}."""
     if not query or not query.strip():
-        return {"valid": False, "rejection_message": "Please provide a question about HDFC mutual fund schemes."}
+        return {
+            "valid": False,
+            "rejection_message": "Please provide a question about mutual fund schemes in the knowledge base.",
+        }
 
-    # 1. Check for investment advice
     if is_investment_advice(query):
         return {"valid": False, "rejection_message": ADVICE_RESPONSE}
 
-    # 2. Check for unknown (non-HDFC) funds
-    if mentions_unknown_fund(query) and not mentions_known_fund(query):
+    if mentions_unknown_fund(query) and not any(
+        re.search(rf"\b{re.escape(amc)}\b", query.lower()) for amc in SUPPORTED_AMCS
+    ):
         return {"valid": False, "rejection_message": UNKNOWN_FUND_RESPONSE}
 
-    # 3. Allow through — the RAG pipeline + LLM will handle edge cases
     return {"valid": True, "rejection_message": None}

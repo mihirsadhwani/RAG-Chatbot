@@ -23,3 +23,12 @@ structured/
 .vscode/
 .idea/
 .gemini/
+
+# Debug artifacts and local data
+debug*.txt
+debug*.html
+out.txt
+phase5_backend/data/
+phase6_ui/node_modules/
+phase6_ui/dist/
+eval/results.json

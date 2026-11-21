@@ -1,68 +1,76 @@
-export default function QuickFacts({ onQuerySelect }) {
-    const categories = [
-        {
-            title: "Cost & Expense Ratings",
-            icon: "💸",
-            queries: [
-                "Expense ratio of HDFC Flexi Cap Direct Plan Growth",
-                "Expense ratio of HDFC Small Cap Fund Direct Growth",
-                "Exit load of HDFC Large Cap Fund Direct Growth",
-                "Stamp duty for HDFC Balanced Advantage Fund Direct Growth"
-            ]
-        },
-        {
-            title: "Investment Needs",
-            icon: "📈",
-            queries: [
-                "Minimum SIP requirement for HDFC Mid Cap Fund Direct Growth",
-                "Minimum Lumpsum of HDFC Small Cap Fund Direct Growth",
-                "Minimum SIP of HDFC Flexi Cap Direct Plan Growth",
-                "Tax implications for HDFC Balanced Advantage Fund Direct Growth"
-            ]
-        },
-        {
-            title: "Performance & Structure",
-            icon: "📊",
-            queries: [
-                "What is the benchmark of HDFC Large Cap Fund Direct Growth?",
-                "Fund size of HDFC Mid Cap Fund Direct Growth",
-                "Current NAV of HDFC Flexi Cap Direct Plan Growth",
-                "Risk level of HDFC Small Cap Fund Direct Growth"
-            ]
-        }
-    ];
+import { Percent, TrendingUp, PieChart, ArrowRight, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
-    return (
-        <div className="flex-1 overflow-y-auto p-6 bg-surface h-full">
-            <div className="max-w-4xl mx-auto">
-                <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-text mb-2">Pre-built Factual Queries</h2>
-                    <p className="text-sm text-text-secondary">Click any question below to immediately send it to the Assistant and retrieve knowledge.</p>
-                </div>
+const DEFAULT_GROUPS = [
+  { title: 'Expense Ratios & Fees', icon: Percent, categories: ['mid cap', 'small cap', 'flexi cap', 'multi cap'], metric: 'expense ratio' },
+  { title: 'NAV & Performance', icon: TrendingUp, categories: ['large cap', 'flexi cap', 'mid cap', 'multi cap'], metric: 'current NAV and 3-year returns' },
+  { title: 'Holdings & Allocation', icon: PieChart, categories: ['small cap', 'mid cap', 'flexi cap', 'multi cap'], metric: 'top holdings and sector allocation' },
+];
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {categories.map((cat, idx) => (
-                        <div key={idx} className="bg-card border border-border rounded-3xl p-6 shadow-sm">
-                            <h3 className="text-base font-bold text-text flex items-center gap-2 mb-4 tracking-tight">
-                                <span className="text-xl bg-surface-alt p-1.5 rounded-lg border border-border/50 shadow-sm">{cat.icon}</span> {cat.title}
-                            </h3>
-                            <ul className="space-y-3">
-                                {cat.queries.map((q, qIdx) => (
-                                    <li key={qIdx}>
-                                        <button
-                                            onClick={() => onQuerySelect(q)}
-                                            className="w-full text-left flex items-start p-3 bg-surface-alt hover:bg-primary/5 hover:border-primary/40 border border-transparent rounded-xl text-sm font-medium text-text-secondary hover:text-primary transition-all group"
-                                        >
-                                            <span className="mr-3 opacity-40 group-hover:opacity-100 group-hover:text-primary transition-opacity translate-y-0.5 mt-0.5">●</span>
-                                            <span className="leading-tight">{q}</span>
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
-            </div>
+function makeGroups(funds) {
+  const preferredAmcs = ['ICICI Prudential', 'SBI', 'Axis', 'Bandhan'];
+  return DEFAULT_GROUPS.map((group) => ({
+    ...group,
+    queries: group.categories
+      .map((category, index) => {
+        const categoryKey = category.replace(/\s+/g, '');
+        const match = funds.find((fund) => {
+          const name = fund.fund_name.toLowerCase().replace(/\s+/g, '');
+          return name.includes(categoryKey) && fund.fund_name.startsWith(preferredAmcs[index]);
+        });
+        return match ? `What is the ${group.metric} for ${match.fund_name}?` : null;
+      })
+      .filter(Boolean),
+  }));
+}
+
+export default function QuickFacts({ funds = [], onQuerySelect }) {
+  const groups = makeGroups(funds);
+
+  return (
+    <div className="flex-1 overflow-y-auto p-4 md:p-6 bg-transparent">
+      <div className="max-w-5xl mx-auto space-y-5">
+        <div>
+          <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
+            <Zap className="w-5 h-5 text-primary" />
+            Quick Facts &amp; Prompt Templates
+          </h3>
+          <p className="text-sm text-muted-foreground">
+            Start with a scheme from the indexed HDFC, ICICI Prudential, SBI, Axis, or Bandhan collection.
+          </p>
         </div>
-    );
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {groups.map((group) => {
+            const Icon = group.icon;
+            return (
+              <Card key={group.title}>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-sm flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <span>{group.title}</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  {group.queries.map((query) => (
+                    <button
+                      key={query}
+                      type="button"
+                      onClick={() => onQuerySelect(query)}
+                      className="group w-full text-left p-3 rounded-lg border border-border bg-background hover:bg-muted hover:border-primary/40 transition-all text-xs font-medium text-foreground flex items-start justify-between gap-2 cursor-pointer"
+                    >
+                      <span className="leading-relaxed">{query}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
+                    </button>
+                  ))}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
 }

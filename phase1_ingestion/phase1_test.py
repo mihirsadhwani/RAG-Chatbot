@@ -27,8 +27,8 @@ def verify_output():
     with open(output_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    if len(data) != 5:
-        print(f"Error: Expected 5 funds, but got {len(data)}")
+    if len(data) != 25:
+        print(f"Error: Expected 25 funds, but got {len(data)}")
         return False
 
     required_fields = ["fund_name", "nav", "expense_ratio", "minimum_sip"]
@@ -41,7 +41,7 @@ def verify_output():
             valid = False
             
     if valid:
-        print("Phase 1 ingestion successful - 5 schemes scraped.")
+        print("Phase 1 ingestion successful - 25 schemes scraped.")
         return True
     else:
         print("Phase 1 ingestion failed - some required fields are missing.")

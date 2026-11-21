@@ -1,144 +1,148 @@
-import { useState } from 'react';
+import { PanelRightClose, PanelRightOpen, Layers, ExternalLink, Sparkles } from 'lucide-react';
 import AttributeTabs from './AttributeTabs';
+import SourceCard from './SourceCard';
+import { Card } from './ui/card';
+import { Badge } from './ui/badge';
+import { Button } from './ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 
-export default function FundInfoPanel({ lastResult, allFunds, selectedFundIndex, setSelectedFundIndex, isCollapsed, onToggle }) {
-    const currentFund = allFunds?.[selectedFundIndex] || null;
+export default function FundInfoPanel({
+  lastResult,
+  allFunds = [],
+  selectedFundIndex = 0,
+  setSelectedFundIndex,
+  isCollapsed,
+  onToggle,
+}) {
+  const currentFund = allFunds?.[selectedFundIndex] || null;
 
-    const [openSections, setOpenSections] = useState({
-        cards: false,
-        tabs: false,
-        knowledge: false
-    });
-
-    const toggleSection = (section) => {
-        setOpenSections(prev => ({ ...prev, [section]: !prev[section] }));
-    };
-
-    // Featured info cards
-    const infoCards = currentFund
-        ? [
-            { label: 'NAV', value: currentFund.nav, color: 'from-indigo-500 to-primary' },
-            { label: 'Expense Ratio', value: currentFund.expense_ratio, color: 'from-accent to-blue-500' },
-            { label: 'Min SIP', value: currentFund.minimum_sip, color: 'from-emerald-500 to-teal-500' },
-            { label: 'AUM', value: currentFund.fund_size_aum, color: 'from-amber-500 to-orange-500' },
-        ]
-        : [];
-
-    const AccordionSection = ({ title, isOpen, onToggle, children, isHighlighted }) => (
-        <div className={`border rounded-[14px] overflow-hidden ${isHighlighted ? 'border-primary/20 bg-primary/5' : 'border-border bg-card shadow-sm'}`}>
-            <button
-                className="w-full flex justify-between items-center p-4 hover:bg-surface-alt transition-colors"
-                onClick={onToggle}
-            >
-                <div className="flex items-center gap-2">
-                    {isHighlighted && <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>}
-                    <span className={`text-[11px] lg:text-[12px] font-bold uppercase tracking-wider ${isHighlighted ? 'text-primary' : 'text-text-secondary'}`}>{title}</span>
-                </div>
-                <span className={`text-xs ${isHighlighted ? 'text-primary' : 'text-text-secondary'}`}>{isOpen ? '▼' : '▶'}</span>
-            </button>
-            {isOpen && (
-                <div className={`p-4 pt-2 border-t ${isHighlighted ? 'border-primary/20' : 'border-border'}`}>
-                    {children}
-                </div>
-            )}
-        </div>
-    );
-
+  if (isCollapsed) {
     return (
-        <div className="flex flex-col h-full bg-surface border-border w-full relative">
-            {/* Collapsible Header */}
-            <div
-                className={`px-4 lg:px-6 py-4 border-b border-border bg-card/80 backdrop-blur-md shrink-0 cursor-pointer flex justify-between items-center group hover:bg-surface-alt transition-colors ${isCollapsed ? 'border-b-0 h-full justify-center lg:justify-start' : ''}`}
-                onClick={onToggle}
+      <div className="h-full w-full flex flex-col items-center py-4 bg-transparent">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onToggle}
+          title="Expand Fund Explorer"
+          aria-label="Expand Fund Explorer"
+        >
+          <PanelRightOpen className="w-4 h-4" />
+        </Button>
+        <div
+          onClick={onToggle}
+          className="mt-6 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground cursor-pointer hover:text-foreground transition-colors"
+          style={{ writingMode: 'vertical-rl' }}
+        >
+          Fund Explorer
+        </div>
+      </div>
+    );
+  }
+
+  const infoCards = currentFund
+    ? [
+        { label: 'NAV', value: currentFund.nav },
+        { label: 'Expense Ratio', value: currentFund.expense_ratio },
+        { label: 'Min SIP', value: currentFund.minimum_sip },
+        { label: 'AUM', value: currentFund.fund_size_aum },
+      ]
+    : [];
+
+  return (
+    <div className="flex flex-col h-full bg-transparent w-full">
+      {/* Header */}
+      <div className="h-16 px-4 border-b border-border flex items-center justify-between gap-2 shrink-0">
+        <div className="flex items-center gap-2 min-w-0">
+          <Layers className="w-4 h-4 text-primary shrink-0" />
+          <div className="min-w-0">
+            <h2 className="text-sm font-semibold text-foreground truncate">Fund Explorer</h2>
+            <p className="text-[11px] text-muted-foreground truncate">Structured KB Inspector</p>
+          </div>
+        </div>
+        <Button
+          variant="ghost"
+          size="icon-sm"
+          onClick={onToggle}
+          title="Collapse Fund Explorer"
+          aria-label="Collapse Fund Explorer"
+        >
+          <PanelRightClose className="w-4 h-4" />
+        </Button>
+      </div>
+
+      {/* Body */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        {allFunds.length > 0 && (
+          <div className="space-y-1.5">
+            <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+              Selected Scheme
+            </label>
+            <Select
+              value={String(selectedFundIndex)}
+              onValueChange={(val) => setSelectedFundIndex(Number(val))}
             >
-                <div className="flex-1">
-                    <h2 className="text-sm lg:text-xl font-bold text-text group-hover:text-primary transition-colors flex items-center gap-2">
-                        Fund Explorer
-                        {!isCollapsed && <span className="text-xs lg:text-sm text-text-secondary">▼</span>}
-                    </h2>
-                    {isCollapsed ? (
-                        <p className="text-[13px] text-text-secondary mt-1 truncate max-w-[200px] lg:max-w-[180px]">
-                            {currentFund?.fund_name || 'Select a fund'}
-                        </p>
-                    ) : (
-                        <p className="text-[10px] lg:text-xs font-semibold text-text-secondary mt-1 tracking-wide uppercase">Browse structured knowledge</p>
-                    )}
-                </div>
-                {isCollapsed && (
-                    <div className="text-text-secondary group-hover:text-primary transition-colors shrink-0 ml-4">
-                        <svg className="w-5 h-5 lg:hidden transform -rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                        </svg>
-                        <svg className="w-5 h-5 hidden lg:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </div>
-                )}
+              <SelectTrigger>
+                <SelectValue placeholder="Choose a fund" />
+              </SelectTrigger>
+              <SelectContent>
+                {allFunds.map((f, i) => (
+                  <SelectItem key={i} value={String(i)}>
+                    {f.fund_name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        )}
+
+        {currentFund && (
+          <>
+            <div className="flex items-center justify-between gap-2">
+              <Badge variant="info">{currentFund.fund_category}</Badge>
+              {currentFund.source_url && (
+                <a
+                  href={currentFund.source_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline"
+                >
+                  Groww
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
             </div>
 
-            {/* Expandable Body */}
-            {!isCollapsed && (
-                <div className="flex-1 overflow-y-auto px-4 lg:px-5 py-5 lg:py-6 space-y-4">
-                    {/* Fund selector */}
-                    {allFunds && allFunds.length > 0 && (
-                        <div className="mb-4">
-                            <label className="block text-xs font-bold text-text-secondary uppercase mb-2 ml-1">Select Highlighted Fund</label>
-                            <select
-                                value={selectedFundIndex}
-                                onChange={(e) => setSelectedFundIndex(Number(e.target.value))}
-                                className="w-full px-4 py-3 rounded-xl border-2 border-border bg-card text-[15px] font-semibold focus:outline-none focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer shadow-sm appearance-none"
-                            >
-                                {allFunds.map((f, i) => (
-                                    <option key={i} value={i}>{f.fund_name}</option>
-                                ))}
-                            </select>
-                        </div>
-                    )}
+            <div className="grid grid-cols-2 gap-2.5">
+              {infoCards.map((c) => (
+              <Card key={c.label} className="p-3 bg-white/45 dark:bg-white/5">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground block">
+                    {c.label}
+                  </span>
+                  <span className="text-sm font-bold text-foreground mt-0.5 block truncate">
+                    {c.value || 'N/A'}
+                  </span>
+                </Card>
+              ))}
+            </div>
 
-                    {/* Info cards accordion */}
-                    {infoCards.length > 0 && (
-                        <AccordionSection
-                            title="Key Metrics"
-                            isOpen={openSections.cards}
-                            onToggle={() => toggleSection('cards')}
-                        >
-                            <div className="grid grid-cols-2 gap-3 lg:gap-4">
-                                {infoCards.map((card) => (
-                                    <div
-                                        key={card.label}
-                                        className="relative overflow-hidden rounded-[12px] lg:rounded-[14px] p-3 lg:p-4 bg-surface border border-border shadow-sm group hover:shadow-md transition-all duration-300"
-                                    >
-                                        <div className={`absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b ${card.color} opacity-80 group-hover:opacity-100 transition-opacity`}></div>
-                                        <p className="text-[10px] lg:text-[11px] font-bold text-text-secondary uppercase tracking-wider">{card.label}</p>
-                                        <p className="text-sm lg:text-base font-bold text-text mt-1">{card.value || 'N/A'}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </AccordionSection>
-                    )}
+            <AttributeTabs fundData={currentFund} />
+          </>
+        )}
 
-                    {/* Attribute tabs accordion */}
-                    <AccordionSection
-                        title="Detailed Analysis"
-                        isOpen={openSections.tabs}
-                        onToggle={() => toggleSection('tabs')}
-                    >
-                        <AttributeTabs fundData={currentFund} />
-                    </AccordionSection>
-
-                    {/* Last API result info accordion */}
-                    {lastResult && (
-                        <AccordionSection
-                            title="Latest Extracted Knowledge"
-                            isOpen={openSections.knowledge}
-                            onToggle={() => toggleSection('knowledge')}
-                            isHighlighted={true}
-                        >
-                            <p className="text-[12px] lg:text-[13px] text-text font-medium leading-relaxed">{lastResult.answer?.substring(0, 250)}{lastResult.answer?.length > 250 ? '...' : ''}</p>
-                        </AccordionSection>
-                    )}
-                </div>
-            )}
-        </div>
-    );
+        {lastResult?.sources && lastResult.sources.length > 0 && (
+          <Card className="p-3.5 bg-primary/5 border-primary/20 space-y-2">
+            <div className="flex items-center gap-1.5 text-xs font-semibold text-primary">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Last AI Response Sources</span>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {lastResult.sources.map((url, idx) => (
+                <SourceCard key={idx} url={url} />
+              ))}
+            </div>
+          </Card>
+        )}
+      </div>
+    </div>
+  );
 }

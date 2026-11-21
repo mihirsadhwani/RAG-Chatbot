@@ -19,30 +19,48 @@ class Phase1Scraper:
             )
             
             total = len(self.urls)
-            for i, url in enumerate(self.urls):
-                print(f"Processing {i+1}/{total}")
-                page = await context.new_page()
-                try:
-                    await page.goto(url, wait_until="domcontentloaded", timeout=60000)
-                    await page.wait_for_selector("h1", timeout=30000)
+            semaphore = asyncio.Semaphore(4)
+
+            async def scrape_url(index, url):
+                async with semaphore:
+                    print(f"Processing {index + 1}/{total}: {url}", flush=True)
+                    page = await context.new_page()
                     try:
-                        await page.wait_for_load_state("networkidle", timeout=15000)
-                    except: pass
-                    
-                    # Deep scroll to trigger all lazy-loaded sections
-                    for s in range(8):
-                        await page.evaluate(f"window.scrollTo(0, {s * 1000})")
-                        await page.wait_for_timeout(600)
-                    await page.evaluate("window.scrollTo(0, 0)")
-                    await page.wait_for_timeout(500)
-                    
-                    fund_data = await self.extract_fund_data(page, url)
-                    self.results.append(fund_data)
-                    print(f"Extracted: {fund_data['fund_name']}")
-                except Exception as e:
-                    print(f"Error scraping {url}: {e}")
-                finally:
-                    await page.close()
+                        await page.goto(url, wait_until="domcontentloaded", timeout=35000)
+                        await page.wait_for_selector("h1", timeout=12000)
+                        try:
+                            await page.wait_for_load_state("networkidle", timeout=8000)
+                        except Exception:
+                            pass
+
+                        # Trigger the lazy-loaded return and portfolio sections.
+                        for scroll in range(8):
+                            await page.evaluate(f"window.scrollTo(0, {scroll * 1000})")
+                            await page.wait_for_timeout(350)
+                        await page.evaluate("window.scrollTo(0, 0)")
+                        await page.wait_for_timeout(300)
+
+                        fund_data = await self.extract_fund_data(page, url)
+                        print(f"Extracted: {fund_data['fund_name']}", flush=True)
+                        return fund_data
+                    except Exception as e:
+                        print(f"Error scraping {url}: {e}", flush=True)
+                        return None
+                    finally:
+                        await page.close()
+
+            results = await asyncio.gather(*(scrape_url(i, url) for i, url in enumerate(self.urls)))
+            fresh = [fund for fund in results if fund]
+            existing = []
+            if os.path.exists(self.output_file):
+                try:
+                    with open(self.output_file, "r", encoding="utf-8") as f:
+                        existing = json.load(f)
+                except (OSError, json.JSONDecodeError):
+                    existing = []
+            by_url = {fund.get("source_url"): fund for fund in existing if fund.get("source_url")}
+            by_url.update({fund.get("source_url"): fund for fund in fresh if fund.get("source_url")})
+            self.results = [by_url[url] for url in self.urls if url in by_url]
             
             await browser.close()
         

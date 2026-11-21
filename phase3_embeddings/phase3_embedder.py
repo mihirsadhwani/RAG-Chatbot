@@ -26,12 +26,14 @@ def generate_embeddings():
             if line.strip():
                 chunks.append(json.loads(line))
 
-    # Load any previously saved embeddings to allow resuming
+    current_chunk_ids = {chunk["chunk_id"] for chunk in chunks}
+
+    # Keep only embeddings that still belong to the current chunk set before resuming.
     embeddings_data = []
     done_ids = set()
     if os.path.exists(output_file):
         with open(output_file, 'r', encoding='utf-8') as f:
-            embeddings_data = json.load(f)
+            embeddings_data = [row for row in json.load(f) if row.get("chunk_id") in current_chunk_ids]
             done_ids = {row["chunk_id"] for row in embeddings_data}
         print(f"[Resume] Found {len(done_ids)} already-embedded chunks. Continuing...")
 

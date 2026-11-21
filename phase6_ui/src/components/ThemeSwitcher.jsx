@@ -1,33 +1,47 @@
+import { Sun, Moon } from 'lucide-react';
+import { Button } from './ui/button';
+import { cn } from '../lib/utils';
+
+const THEMES = [
+  { id: 'purple', label: 'Indigo', swatch: 'bg-[#6258d9]' },
+  { id: 'blue', label: 'Blue', swatch: 'bg-[#087cff]' },
+  { id: 'teal', label: 'Teal', swatch: 'bg-[#15a38c]' },
+];
+
 export default function ThemeSwitcher({ isDarkMode, onToggleDarkMode, theme, onThemeChange }) {
-    const themes = [
-        { id: 'purple', bg: 'bg-indigo-500' },
-        { id: 'blue', bg: 'bg-blue-600' },
-        { id: 'teal', bg: 'bg-teal-500' },
-    ];
+  return (
+    <div className="flex items-center gap-2">
+      <div className="glass-control hidden sm:flex items-center gap-1.5 rounded-full p-1.5">
+        {THEMES.map((t) => (
+          <button
+            key={t.id}
+            onClick={() => onThemeChange(t.id)}
+            title={`${t.label} accent`}
+            aria-label={`${t.label} theme`}
+            className={cn(
+              'w-4 h-4 rounded-full transition-all cursor-pointer flex items-center justify-center',
+              t.swatch,
+              theme === t.id
+                ? 'ring-2 ring-white ring-offset-2 ring-offset-primary/20 scale-110 shadow-sm'
+                : 'opacity-55 hover:opacity-100 hover:scale-110'
+            )}
+          />
+        ))}
+      </div>
 
-    return (
-        <div className="flex items-center gap-4">
-            {/* Theme Options */}
-            <div className="flex bg-surface-alt p-1 rounded-full border border-border">
-                {themes.map((t) => (
-                    <button
-                        key={t.id}
-                        onClick={() => onThemeChange(t.id)}
-                        className={`w-6 h-6 rounded-full mx-1 transition-transform hover:scale-110 cursor-pointer border-2 ${theme === t.id ? 'border-text scale-110 shadow-md' : 'border-transparent opacity-70'
-                            } ${t.bg}`}
-                        title={`Switch to ${t.id} theme`}
-                    />
-                ))}
-            </div>
-
-            {/* Dark Mode Toggle */}
-            <button
-                onClick={onToggleDarkMode}
-                className="p-2 rounded-xl bg-surface-alt border border-border text-text-secondary hover:text-text transition-colors cursor-pointer"
-                title="Toggle Dark Mode"
-            >
-                {isDarkMode ? '☀️' : '🌙'}
-            </button>
-        </div>
-    );
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={onToggleDarkMode}
+        title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+        aria-label="Toggle color mode"
+      >
+        {isDarkMode ? (
+          <Sun className="w-4 h-4 text-amber-400" />
+        ) : (
+          <Moon className="w-4 h-4 text-slate-600" />
+        )}
+      </Button>
+    </div>
+  );
 }

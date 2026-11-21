@@ -1,75 +1,78 @@
 import { useState } from 'react';
-import { FUNDS } from '../constants/funds';
+import { SlidersHorizontal, ArrowRight } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { Button } from './ui/button';
 
 const ATTRIBUTES = [
-    'Expense Ratio',
-    'Minimum SIP',
-    'Exit Load',
-    'Fund Size',
-    'Risk Level',
-    'Benchmark',
-    'NAV',
-    'Tax Implication',
-    'Fund Manager',
+  { id: 'nav', label: 'Current NAV' },
+  { id: 'expense_ratio', label: 'Expense Ratio' },
+  { id: 'minimum_sip', label: 'Minimum SIP' },
+  { id: 'fund_size_aum', label: 'Fund Size / AUM' },
+  { id: 'exit_load', label: 'Exit Load' },
+  { id: 'returns', label: 'Returns (1Y, 3Y, 5Y)' },
+  { id: 'holdings', label: 'Top Holdings' },
+  { id: 'sector_allocation', label: 'Sector Allocation' },
+  { id: 'fund_managers', label: 'Fund Manager' },
+  { id: 'risk_level', label: 'Risk Level' },
 ];
 
-export default function QueryDropdown({ onQueryGenerated }) {
-    const [selectedAttr, setSelectedAttr] = useState('');
-    const [selectedFundIdx, setSelectedFundIdx] = useState('');
+export default function QueryDropdown({ allFunds = [], funds = [], onQueryGenerated }) {
+  const fundList = allFunds.length ? allFunds : funds;
+  const [selectedAttribute, setSelectedAttribute] = useState('');
+  const [selectedFund, setSelectedFund] = useState('');
 
-    const handleGenerate = () => {
-        if (!selectedAttr || selectedFundIdx === '') return;
-        const fund = FUNDS[Number(selectedFundIdx)];
-        // Use the exact scheme name so the backend retriever can match it
-        const query = `What is the ${selectedAttr.toLowerCase()} of ${fund.scheme}?`;
-        onQueryGenerated(query);
-        setSelectedAttr('');
-        setSelectedFundIdx('');
-    };
+  const handleAsk = () => {
+    if (!selectedAttribute || !selectedFund) return;
+    const attrLabel = ATTRIBUTES.find((a) => a.id === selectedAttribute)?.label || selectedAttribute;
+    onQueryGenerated(`What is the ${attrLabel} of ${selectedFund}?`);
+  };
 
-    return (
-        <div className="bg-card rounded-2xl border border-border p-4 mb-4 shadow-sm">
-            <p className="text-xs font-semibold text-text-secondary uppercase tracking-wider mb-3">Select a mutual fund fact</p>
-
-            <div className="flex flex-col sm:flex-row gap-2 sm:items-end">
-                {/* Attribute dropdown */}
-                <div className="flex-1 w-full sm:w-auto">
-                    <select
-                        value={selectedAttr}
-                        onChange={(e) => setSelectedAttr(e.target.value)}
-                        className="w-full px-3 py-2.5 rounded-xl border border-border bg-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all appearance-none cursor-pointer"
-                    >
-                        <option value="">Choose attribute...</option>
-                        {ATTRIBUTES.map((a) => (
-                            <option key={a} value={a}>{a}</option>
-                        ))}
-                    </select>
-                </div>
-
-                {/* Fund dropdown */}
-                <div className="flex-1 w-full sm:w-auto">
-                    <select
-                        value={selectedFundIdx}
-                        onChange={(e) => setSelectedFundIdx(e.target.value)}
-                        className="w-full px-3 py-2.5 rounded-xl border border-border bg-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all appearance-none cursor-pointer"
-                    >
-                        <option value="">Choose fund...</option>
-                        {FUNDS.map((f, i) => (
-                            <option key={f.slug} value={i}>{f.name}</option>
-                        ))}
-                    </select>
-                </div>
-
-                {/* Generate button */}
-                <button
-                    onClick={handleGenerate}
-                    disabled={!selectedAttr || selectedFundIdx === ''}
-                    className="w-full sm:w-auto px-5 py-2.5 bg-primary text-white rounded-xl text-sm font-medium hover:bg-primary-dark disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer whitespace-nowrap"
-                >
-                    Ask →
-                </button>
-            </div>
+  return (
+    <div className="rounded-xl border border-border bg-card p-3 shadow-xs">
+      <div className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+        <SlidersHorizontal className="w-3.5 h-3.5 text-primary" />
+        <span>Quick Fact Builder</span>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-2">
+        <div className="flex-1 min-w-0">
+          <Select value={selectedAttribute} onValueChange={setSelectedAttribute}>
+            <SelectTrigger>
+              <SelectValue placeholder="Choose attribute..." />
+            </SelectTrigger>
+            <SelectContent>
+              {ATTRIBUTES.map((attr) => (
+                <SelectItem key={attr.id} value={attr.id}>
+                  {attr.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
-    );
-}
 
+        <div className="flex-1 min-w-0">
+          <Select value={selectedFund} onValueChange={setSelectedFund}>
+            <SelectTrigger>
+              <SelectValue placeholder="Choose fund..." />
+            </SelectTrigger>
+            <SelectContent>
+              {fundList.map((fund) => (
+                <SelectItem key={fund.fund_name} value={fund.fund_name}>
+                  {fund.fund_name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        <Button
+          onClick={handleAsk}
+          disabled={!selectedAttribute || !selectedFund}
+          className="shrink-0"
+        >
+          Ask
+          <ArrowRight className="w-4 h-4" />
+        </Button>
+      </div>
+    </div>
+  );
+}
