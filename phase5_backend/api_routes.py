@@ -16,7 +16,7 @@ analytics.init_db()
 
 
 def _funds_path():
-    return os.path.join(rag_service.project_root, "phase1_ingestion", "output", "raw_funds.json")
+    return kb.get_funds_path()
 
 
 @router.get("/api/funds")

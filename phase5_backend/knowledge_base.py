@@ -13,6 +13,11 @@ import re
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 RAW_PATH = os.path.join(ROOT, "phase1_ingestion", "output", "raw_funds.json")
+FALLBACK_RAW_PATH = os.path.join(ROOT, "phase6_ui", "public", "fund_data.json")
+
+
+def get_funds_path() -> str:
+    return RAW_PATH if os.path.exists(RAW_PATH) else FALLBACK_RAW_PATH
 
 AMC_PATTERNS = {
     "hdfc": [r"\bhdfc\b"],
@@ -105,9 +110,10 @@ _FUNDS_MTIME = None
 
 def load_funds() -> dict:
     global _FUNDS, _FUNDS_MTIME
-    mtime = os.path.getmtime(RAW_PATH) if os.path.exists(RAW_PATH) else None
+    path = get_funds_path()
+    mtime = os.path.getmtime(path) if os.path.exists(path) else None
     if _FUNDS is None or (mtime is not None and mtime != _FUNDS_MTIME):
-        with open(RAW_PATH, "r", encoding="utf-8") as f:
+        with open(path, "r", encoding="utf-8") as f:
             _FUNDS = {d["fund_name"]: d for d in json.load(f)}
         _FUNDS_MTIME = mtime
     return _FUNDS
